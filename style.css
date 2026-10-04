@@ -1,30 +1,23 @@
 /* =========================================================
-   SREYASMON SHAJI — PROFESSIONAL PORTFOLIO
+   SREYASMON SHAJI
+   Nordic Enterprise / Consulting Portfolio Theme
    ========================================================= */
 
 :root {
-    --navy: #0b1730;
-    --navy-2: #102347;
-    --navy-dark: #070f20;
+    --ink: #20252b;
+    --ink-soft: #3f4852;
+    --muted: #68737e;
 
-    --blue: #2f80ff;
-    --blue-light: #62adff;
+    --accent: #496879;
+    --accent-dark: #355363;
+    --accent-light: #dce6ea;
 
+    --paper: #f7f6f2;
     --white: #ffffff;
-
-    --grey-50: #f8fafc;
-    --grey-100: #f1f4f8;
-    --grey-200: #e5eaf1;
-    --grey-300: #d5dce6;
-
-    --text: #172235;
-    --muted: #66748a;
+    --line: #deded9;
+    --line-dark: #c9cbc7;
 
     --max-width: 1180px;
-
-    --shadow: 0 15px 45px rgba(11, 23, 48, 0.09);
-
-    --radius: 14px;
 }
 
 
@@ -52,8 +45,8 @@ body {
         Arial,
         sans-serif;
 
-    color: var(--text);
-    background: var(--white);
+    color: var(--ink);
+    background: var(--paper);
 
     font-size: 16px;
     line-height: 1.65;
@@ -79,15 +72,15 @@ a {
     top: 0;
     z-index: 1000;
 
-    background: rgba(7, 15, 32, 0.96);
+    background: rgba(247, 246, 242, 0.94);
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid var(--line);
 
     backdrop-filter: blur(12px);
 }
 
 .nav {
-    height: 74px;
+    height: 76px;
 
     display: flex;
     align-items: center;
@@ -95,35 +88,34 @@ a {
 }
 
 .brand {
-    color: var(--white);
+    color: var(--ink);
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
 
     letter-spacing: 0.08em;
 }
 
 .brand span {
-    color: var(--blue-light);
-    margin-left: 4px;
+    color: var(--accent);
 }
 
 nav {
     display: flex;
-    gap: 32px;
+    gap: 30px;
 }
 
 nav a {
-    color: rgba(255,255,255,0.65);
+    color: var(--muted);
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
 
     transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: var(--white);
+    color: var(--ink);
 }
 
 
@@ -132,77 +124,46 @@ nav a:hover {
    ========================================================= */
 
 .hero {
-    position: relative;
-
-    color: var(--white);
-
     padding: 105px 0 0;
 
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(47,128,255,0.22),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            var(--navy-dark),
-            var(--navy) 60%,
-            var(--navy-2)
-        );
+    background: var(--paper);
 
-    overflow: hidden;
-}
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 600px;
-    height: 600px;
-
-    right: -300px;
-    top: -300px;
-
-    border: 1px solid rgba(98,173,255,0.15);
-
-    border-radius: 50%;
+    border-bottom: 1px solid var(--line);
 }
 
 .hero-layout {
-    position: relative;
-    z-index: 2;
-
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 350px;
 
-    gap: 85px;
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    gap: 100px;
 
     align-items: center;
 }
 
 .hero-main {
-    max-width: 760px;
+    max-width: 780px;
 }
 
 .eyebrow {
-    color: var(--blue-light);
+    color: var(--accent);
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
 
     letter-spacing: 0.16em;
 
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .hero h1 {
-    font-size: clamp(44px, 5vw, 68px);
+    color: var(--ink);
 
-    line-height: 1.08;
+    font-size: clamp(45px, 6vw, 72px);
 
-    letter-spacing: -0.045em;
+    line-height: 1.04;
+
+    letter-spacing: -0.055em;
 
     font-weight: 750;
 }
@@ -210,27 +171,27 @@ nav a:hover {
 .hero h1 span {
     display: block;
 
-    color: var(--blue-light);
+    color: var(--accent);
 }
 
 .hero-lead {
-    max-width: 720px;
+    max-width: 710px;
 
-    margin-top: 30px;
+    margin-top: 28px;
 
-    color: rgba(255,255,255,0.82);
+    color: var(--ink-soft);
 
-    font-size: 20px;
+    font-size: 19px;
 
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .hero-buttons {
     display: flex;
 
-    gap: 13px;
+    gap: 12px;
 
-    margin-top: 35px;
+    margin-top: 34px;
 }
 
 
@@ -241,78 +202,70 @@ nav a:hover {
 .button {
     display: inline-flex;
 
-    min-height: 48px;
+    min-height: 46px;
 
     align-items: center;
     justify-content: center;
 
-    padding: 0 23px;
+    padding: 0 21px;
 
-    border-radius: 6px;
+    border-radius: 4px;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
 
     transition:
-        transform .2s ease,
-        background .2s ease,
-        border-color .2s ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .button.primary {
     color: var(--white);
 
-    background: var(--blue);
-
-    box-shadow: 0 10px 25px rgba(47,128,255,0.28);
+    background: var(--accent);
 }
 
 .button.primary:hover {
-    background: #2475ed;
+    background: var(--accent-dark);
 }
 
 .button.secondary {
-    color: var(--white);
+    color: var(--ink);
 
-    border: 1px solid rgba(255,255,255,0.28);
+    background: transparent;
+
+    border: 1px solid var(--line-dark);
 }
 
 .button.secondary:hover {
-    background: rgba(255,255,255,0.07);
+    background: var(--white);
 
-    border-color: rgba(255,255,255,0.5);
+    border-color: var(--accent);
 }
 
 
 /* =========================================================
-   HERO CARD
+   HERO INFORMATION PANEL
    ========================================================= */
 
 .hero-card {
-    padding: 32px;
+    padding: 28px;
 
-    background: rgba(255,255,255,0.07);
+    background: var(--white);
 
-    border: 1px solid rgba(255,255,255,0.14);
+    border: 1px solid var(--line);
 
-    border-radius: 16px;
-
-    backdrop-filter: blur(12px);
-
-    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    border-top: 3px solid var(--accent);
 }
 
 .hero-card-top span,
 .hero-focus small {
     display: block;
 
-    color: var(--blue-light);
+    color: var(--accent);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
     letter-spacing: 0.13em;
@@ -321,33 +274,35 @@ nav a:hover {
 .hero-card-top strong {
     display: block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
-    font-size: 25px;
+    color: var(--ink);
+
+    font-size: 23px;
 }
 
 .hero-card-divider {
     height: 1px;
 
-    margin: 25px 0;
+    margin: 24px 0;
 
-    background: rgba(255,255,255,0.12);
+    background: var(--line);
 }
 
 .hero-focus {
     display: grid;
 
-    gap: 20px;
+    gap: 19px;
 }
 
 .hero-focus strong {
     display: block;
 
-    margin-top: 3px;
+    margin-top: 2px;
 
-    color: rgba(255,255,255,0.92);
+    color: var(--ink-soft);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -356,31 +311,25 @@ nav a:hover {
    ========================================================= */
 
 .metrics {
-    position: relative;
-    z-index: 5;
-
     display: grid;
+
     grid-template-columns: repeat(5, 1fr);
 
-    margin-top: 80px;
-
-    transform: translateY(50%);
+    margin-top: 75px;
 
     background: var(--white);
 
-    border: 1px solid var(--grey-200);
+    border: 1px solid var(--line);
 
-    border-radius: 14px;
-
-    box-shadow: var(--shadow);
+    transform: translateY(1px);
 }
 
 .metric {
-    padding: 25px 22px;
+    min-height: 105px;
 
-    min-height: 112px;
+    padding: 23px 20px;
 
-    border-right: 1px solid var(--grey-200);
+    border-right: 1px solid var(--line);
 }
 
 .metric:last-child {
@@ -390,9 +339,9 @@ nav a:hover {
 .metric strong {
     display: block;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 31px;
+    font-size: 29px;
 
     line-height: 1;
 }
@@ -404,7 +353,7 @@ nav a:hover {
 
     color: var(--muted);
 
-    font-size: 11px;
+    font-size: 10px;
 
     line-height: 1.4;
 }
@@ -415,18 +364,18 @@ nav a:hover {
    ========================================================= */
 
 .section {
-    padding: 120px 0;
+    padding: 115px 0;
 }
 
 .section-label {
     display: block;
 
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
 }
 
 .section-intro h2,
@@ -435,15 +384,15 @@ nav a:hover {
 .technology h2,
 .credentials h2,
 .process-heading h2 {
-    margin-top: 13px;
+    margin-top: 12px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(32px, 4vw, 47px);
 
-    line-height: 1.12;
+    line-height: 1.1;
 
-    letter-spacing: -0.035em;
+    letter-spacing: -0.04em;
 }
 
 .section-intro h2 span,
@@ -451,7 +400,7 @@ nav a:hover {
 .healthcare h2 span,
 .technology h2 span,
 .credentials h2 span {
-    color: var(--blue);
+    color: var(--accent);
 }
 
 
@@ -460,53 +409,55 @@ nav a:hover {
    ========================================================= */
 
 .about {
-    padding-top: 180px;
+    padding-top: 120px;
 
-    background: var(--grey-50);
+    background: var(--white);
 }
 
 .split-layout {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
 
-    gap: 100px;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 105px;
 }
 
 .about-content {
-    padding-top: 4px;
+    padding-top: 3px;
 }
 
 .large-text {
-    color: var(--text);
+    color: var(--ink-soft);
 
-    font-size: 20px;
+    font-size: 19px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 .about-facts {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     margin-top: 38px;
 
-    border-top: 1px solid var(--grey-300);
-    border-left: 1px solid var(--grey-300);
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
 }
 
 .about-facts div {
-    padding: 20px;
+    padding: 19px;
 
-    border-right: 1px solid var(--grey-300);
-    border-bottom: 1px solid var(--grey-300);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 }
 
 .about-facts strong {
     display: block;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .about-facts span {
@@ -516,16 +467,17 @@ nav a:hover {
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
 /* =========================================================
-   SECTION HEADING ROW
+   SECTION HEADING
    ========================================================= */
 
 .section-heading-row {
     display: grid;
+
     grid-template-columns: 1fr 0.65fr;
 
     gap: 70px;
@@ -536,7 +488,7 @@ nav a:hover {
 .section-heading-row > p {
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -545,49 +497,52 @@ nav a:hover {
    ========================================================= */
 
 .expertise {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .expertise-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
-    margin-top: 65px;
+    margin-top: 60px;
 
-    border-top: 1px solid var(--grey-200);
-    border-left: 1px solid var(--grey-200);
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
 }
 
 .expertise-card {
-    min-height: 310px;
+    min-height: 285px;
 
-    padding: 35px;
+    padding: 34px;
 
-    border-right: 1px solid var(--grey-200);
-    border-bottom: 1px solid var(--grey-200);
+    background: var(--paper);
 
-    transition: background .2s ease;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    transition: background 0.2s ease;
 }
 
 .expertise-card:hover {
-    background: var(--grey-50);
+    background: var(--white);
 }
 
 .card-number {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
 }
 
 .expertise-card h3 {
     margin-top: 28px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 25px;
+    font-size: 24px;
 
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
 }
 
 .expertise-card > p {
@@ -597,11 +552,12 @@ nav a:hover {
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .tags {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 6px;
@@ -610,15 +566,15 @@ nav a:hover {
 }
 
 .tags span {
-    padding: 5px 9px;
+    padding: 5px 8px;
 
-    color: #48576d;
+    color: var(--accent-dark);
 
-    background: var(--grey-100);
+    background: var(--accent-light);
 
-    border-radius: 4px;
+    border-radius: 3px;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
 }
 
@@ -628,138 +584,139 @@ nav a:hover {
    ========================================================= */
 
 .experience {
-    background: var(--grey-50);
+    background: var(--white);
 }
 
 .experience-layout {
     display: grid;
-    grid-template-columns: 330px 1fr;
+
+    grid-template-columns: 320px 1fr;
 
     gap: 90px;
 
-    margin-top: 70px;
+    margin-top: 65px;
 }
 
 .experience-profile {
     align-self: start;
 
     position: sticky;
+
     top: 105px;
 }
 
 .profile-label {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.13em;
 }
 
 .experience-profile h3 {
-    margin-top: 20px;
+    margin-top: 18px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 30px;
+    font-size: 29px;
 
     line-height: 1.2;
 }
 
 .profile-subtitle {
-    color: var(--blue);
+    color: var(--accent);
 
     font-weight: 700;
 }
 
 .experience-profile > p:not(.profile-subtitle) {
-    margin-top: 20px;
+    margin-top: 18px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .client-box {
-    margin-top: 30px;
+    margin-top: 28px;
 
-    padding: 20px;
+    padding: 19px;
 
-    background: var(--white);
+    background: var(--paper);
 
-    border-left: 3px solid var(--blue);
-
-    box-shadow: 0 8px 25px rgba(11,23,48,.05);
+    border-left: 3px solid var(--accent);
 }
 
 .client-box small {
     display: block;
 
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.13em;
 }
 
 .client-box strong {
     display: block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .client-box span {
     display: block;
 
-    margin-top: 4px;
+    margin-top: 3px;
 
     color: var(--muted);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .experience-list {
-    border-top: 1px solid var(--grey-300);
+    border-top: 1px solid var(--line);
 }
 
 .experience-item {
     display: grid;
-    grid-template-columns: 50px 1fr;
 
-    gap: 25px;
+    grid-template-columns: 45px 1fr;
 
-    padding: 30px 0;
+    gap: 24px;
 
-    border-bottom: 1px solid var(--grey-300);
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--line);
 }
 
 .experience-number {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
 }
 
 .experience-type {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: .1em;
+    letter-spacing: 0.11em;
 }
 
 .experience-item h3 {
-    margin-top: 7px;
+    margin-top: 6px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 24px;
+    font-size: 22px;
 
     line-height: 1.25;
 }
@@ -767,11 +724,11 @@ nav a:hover {
 .experience-item p {
     max-width: 650px;
 
-    margin-top: 10px;
+    margin-top: 9px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -780,46 +737,43 @@ nav a:hover {
    ========================================================= */
 
 .projects {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .project-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 18px;
+    gap: 16px;
 
-    margin-top: 60px;
+    margin-top: 58px;
 }
 
 .project-card {
-    min-height: 310px;
+    min-height: 300px;
 
-    padding: 32px;
+    padding: 31px;
 
-    background: var(--grey-50);
+    background: var(--white);
 
-    border: 1px solid var(--grey-200);
-
-    border-radius: 12px;
+    border: 1px solid var(--line);
 
     transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 
-    box-shadow: var(--shadow);
+    border-color: var(--accent);
 }
 
 .featured-project {
-    color: var(--white);
+    background: var(--accent);
 
-    background: var(--navy);
-
-    border-color: var(--navy);
+    border-color: var(--accent);
 }
 
 .project-meta {
@@ -829,31 +783,37 @@ nav a:hover {
 }
 
 .project-meta span:first-child {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
+}
+
+.featured-project .project-meta span:first-child {
+    color: var(--white);
 }
 
 .project-meta span:last-child {
     color: var(--muted);
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
 }
 
 .featured-project .project-meta span:last-child {
-    color: rgba(255,255,255,.45);
+    color: rgba(255,255,255,0.55);
 }
 
 .project-card h3 {
-    margin-top: 38px;
+    margin-top: 36px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 27px;
+    font-size: 26px;
+
+    letter-spacing: -0.025em;
 }
 
 .featured-project h3 {
@@ -865,34 +825,38 @@ nav a:hover {
 
     margin-top: 3px;
 
-    color: var(--blue);
+    color: var(--accent);
+
+    font-size: 11px;
+}
+
+.featured-project strong {
+    color: var(--accent-light);
+}
+
+.project-card p {
+    margin-top: 17px;
+
+    color: var(--muted);
 
     font-size: 12px;
 }
 
-.project-card p {
-    margin-top: 18px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
 .featured-project p {
-    color: rgba(255,255,255,.65);
+    color: rgba(255,255,255,0.72);
 }
 
 .project-stack {
-    margin-top: 25px;
+    margin-top: 23px;
 
-    color: #506077;
+    color: var(--accent-dark);
 
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 9px;
+    font-weight: 800;
 }
 
 .featured-project .project-stack {
-    color: var(--blue-light);
+    color: var(--white);
 }
 
 
@@ -901,52 +865,49 @@ nav a:hover {
    ========================================================= */
 
 .healthcare {
-    background:
-        linear-gradient(
-            135deg,
-            #edf4ff,
-            #f8fbff
-        );
+    background: #edf2f3;
 }
 
 .healthcare-layout {
     display: grid;
-    grid-template-columns: .8fr 1.2fr;
+
+    grid-template-columns: 0.8fr 1.2fr;
 
     gap: 100px;
 }
 
 .healthcare-lead {
-    color: var(--navy);
+    color: var(--ink-soft);
 
-    font-size: 21px;
+    font-size: 20px;
 
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 .domain-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
-    margin-top: 35px;
+    margin-top: 32px;
 
-    border-top: 1px solid var(--grey-300);
-    border-left: 1px solid var(--grey-300);
+    border-top: 1px solid var(--line-dark);
+    border-left: 1px solid var(--line-dark);
 }
 
 .domain-item {
     padding: 20px;
 
-    border-right: 1px solid var(--grey-300);
-    border-bottom: 1px solid var(--grey-300);
+    border-right: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
 }
 
 .domain-item strong {
     display: block;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .domain-item span {
@@ -956,7 +917,7 @@ nav a:hover {
 
     color: var(--muted);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
@@ -965,13 +926,13 @@ nav a:hover {
    ========================================================= */
 
 .process {
-    color: var(--white);
+    background: var(--ink);
 
-    background: var(--navy);
+    color: var(--white);
 }
 
 .process-heading .section-label {
-    color: var(--blue-light);
+    color: var(--accent-light);
 }
 
 .process-heading h2 {
@@ -983,7 +944,7 @@ nav a:hover {
 
     align-items: center;
 
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .process-flow > div {
@@ -995,47 +956,47 @@ nav a:hover {
 .process-flow span {
     display: flex;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
     margin: 0 auto;
 
     align-items: center;
     justify-content: center;
 
-    color: var(--blue-light);
+    color: var(--accent-light);
 
-    border: 1px solid rgba(98,173,255,.4);
+    border: 1px solid rgba(220,230,234,0.35);
 
     border-radius: 50%;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 }
 
 .process-flow strong {
     display: block;
 
-    margin-top: 14px;
+    margin-top: 13px;
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .process-flow small {
     display: block;
 
-    margin-top: 3px;
+    margin-top: 2px;
 
-    color: rgba(255,255,255,.45);
+    color: rgba(255,255,255,0.45);
 
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .process-flow i {
-    width: 45px;
+    width: 40px;
     height: 1px;
 
-    background: rgba(255,255,255,.18);
+    background: rgba(255,255,255,0.18);
 }
 
 
@@ -1044,41 +1005,43 @@ nav a:hover {
    ========================================================= */
 
 .technology {
-    background: var(--grey-50);
+    background: var(--white);
 }
 
 .technology-layout {
     display: grid;
-    grid-template-columns: .7fr 1.3fr;
+
+    grid-template-columns: 0.7fr 1.3fr;
 
     gap: 100px;
 }
 
 .technology-table {
-    border-top: 1px solid var(--grey-300);
+    border-top: 1px solid var(--line);
 }
 
 .technology-table > div {
     display: grid;
-    grid-template-columns: 150px 1fr;
+
+    grid-template-columns: 145px 1fr;
 
     gap: 30px;
 
-    padding: 22px 0;
+    padding: 21px 0;
 
-    border-bottom: 1px solid var(--grey-300);
+    border-bottom: 1px solid var(--line);
 }
 
 .technology-table strong {
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .technology-table span {
     color: var(--muted);
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
@@ -1087,50 +1050,50 @@ nav a:hover {
    ========================================================= */
 
 .credentials {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .credentials-layout {
     display: grid;
-    grid-template-columns: .7fr 1.3fr;
+
+    grid-template-columns: 0.7fr 1.3fr;
 
     gap: 100px;
 }
 
 .credential-list {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 18px;
+    gap: 16px;
 }
 
 .credential {
-    padding: 27px;
+    padding: 26px;
 
-    background: var(--grey-50);
+    background: var(--white);
 
-    border: 1px solid var(--grey-200);
-
-    border-radius: 10px;
+    border: 1px solid var(--line);
 }
 
 .credential span {
-    color: var(--blue);
+    color: var(--accent);
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
 }
 
 .credential strong {
     display: block;
 
-    margin-top: 15px;
+    margin-top: 14px;
 
-    color: var(--navy);
+    color: var(--ink);
 
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.35;
 }
@@ -1142,7 +1105,7 @@ nav a:hover {
 
     color: var(--muted);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
@@ -1153,60 +1116,53 @@ nav a:hover {
 .contact {
     padding: 80px 0;
 
-    background: var(--grey-100);
+    background: var(--paper);
 }
 
 .contact-box {
     display: grid;
+
     grid-template-columns: 1fr auto;
 
     gap: 70px;
 
     align-items: end;
 
-    padding: 60px;
+    padding: 58px;
 
     color: var(--white);
 
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(47,128,255,.25),
-            transparent 30%
-        ),
-        var(--navy);
-
-    border-radius: 16px;
+    background: var(--accent-dark);
 }
 
 .contact-box .section-label {
-    color: var(--blue-light);
+    color: var(--accent-light);
 }
 
 .contact-box h2 {
     max-width: 700px;
 
-    margin-top: 12px;
+    margin-top: 11px;
 
     font-size: clamp(34px, 4vw, 50px);
 
-    line-height: 1.1;
+    line-height: 1.08;
 
-    letter-spacing: -.035em;
+    letter-spacing: -0.04em;
 }
 
 .contact-box h2 span {
-    color: var(--blue-light);
+    color: var(--accent-light);
 }
 
 .contact-box p {
     max-width: 650px;
 
-    margin-top: 18px;
+    margin-top: 17px;
 
-    color: rgba(255,255,255,.62);
+    color: rgba(255,255,255,0.72);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .contact-actions {
@@ -1216,15 +1172,15 @@ nav a:hover {
 
     align-items: flex-start;
 
-    gap: 12px;
+    gap: 10px;
 }
 
 .contact-actions small {
-    margin-top: 12px;
+    margin-top: 10px;
 
-    color: rgba(255,255,255,.45);
+    color: rgba(255,255,255,0.5);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
@@ -1233,11 +1189,11 @@ nav a:hover {
    ========================================================= */
 
 footer {
-    padding: 28px 0;
+    padding: 27px 0;
 
-    color: rgba(255,255,255,.45);
+    color: rgba(255,255,255,0.45);
 
-    background: var(--navy-dark);
+    background: var(--ink);
 }
 
 .footer-inner {
@@ -1248,17 +1204,15 @@ footer {
 }
 
 .footer-inner strong {
-    display: block;
-
     color: var(--white);
 
-    font-size: 12px;
+    font-size: 11px;
 
-    letter-spacing: .08em;
+    letter-spacing: 0.08em;
 }
 
 .footer-inner span {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 
@@ -1270,6 +1224,8 @@ footer {
 
     .hero-layout {
         grid-template-columns: 1fr;
+
+        gap: 55px;
     }
 
     .hero-card {
@@ -1286,7 +1242,7 @@ footer {
 
     .metric:nth-child(4),
     .metric:nth-child(5) {
-        border-top: 1px solid var(--grey-200);
+        border-top: 1px solid var(--line);
     }
 
     .split-layout,
@@ -1307,7 +1263,7 @@ footer {
     .experience-layout {
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 45px;
     }
 
     .experience-profile {
@@ -1351,7 +1307,7 @@ footer {
     }
 
     .hero-layout {
-        gap: 45px;
+        gap: 42px;
     }
 
     .hero h1 {
@@ -1359,7 +1315,7 @@ footer {
     }
 
     .hero-lead {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .hero-buttons {
@@ -1374,41 +1330,38 @@ footer {
         grid-template-columns: repeat(2, 1fr);
 
         margin-top: 55px;
-
-        transform: none;
     }
 
     .metric {
-        min-height: 100px;
+        min-height: 95px;
     }
 
     .metric:nth-child(2) {
         border-right: 0;
     }
 
-    .metric:nth-child(3) {
-        border-top: 1px solid var(--grey-200);
+    .metric:nth-child(3),
+    .metric:nth-child(4) {
+        border-top: 1px solid var(--line);
     }
 
     .metric:nth-child(4) {
-        border-top: 1px solid var(--grey-200);
-
         border-right: 0;
     }
 
     .metric:nth-child(5) {
         grid-column: span 2;
 
-        border-top: 1px solid var(--grey-200);
+        border-top: 1px solid var(--line);
         border-right: 0;
     }
 
     .section {
-        padding: 85px 0;
+        padding: 80px 0;
     }
 
     .about {
-        padding-top: 90px;
+        padding-top: 80px;
     }
 
     .about-facts,
@@ -1424,13 +1377,14 @@ footer {
     }
 
     .experience-item {
-        grid-template-columns: 35px 1fr;
+        grid-template-columns: 34px 1fr;
 
-        gap: 15px;
+        gap: 14px;
     }
 
     .process-flow {
         display: grid;
+
         grid-template-columns: 1fr 1fr;
 
         gap: 35px 15px;
@@ -1443,7 +1397,7 @@ footer {
     .technology-table > div {
         grid-template-columns: 1fr;
 
-        gap: 5px;
+        gap: 4px;
     }
 
     .contact-box {
@@ -1463,6 +1417,6 @@ footer {
 
         align-items: flex-start;
 
-        gap: 10px;
+        gap: 8px;
     }
 }

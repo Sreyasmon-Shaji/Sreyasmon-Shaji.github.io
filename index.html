@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,24 +18,27 @@
 <body>
 
     <!-- =========================
-         HEADER
+         NAVIGATION
     ========================== -->
-    <header class="site-header">
-        <div class="container nav-container">
 
-            <a href="#home" class="logo">
-                SREYASMON<span>SHAJI</span>
+    <header class="site-header">
+
+        <div class="container nav">
+
+            <a href="#home" class="brand">
+                SREYASMON <span>SHAJI</span>
             </a>
 
-            <nav class="main-nav">
+            <nav>
                 <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
 
         </div>
+
     </header>
 
 
@@ -43,15 +47,16 @@
         <!-- =========================
              HERO
         ========================== -->
+
         <section id="home" class="hero">
 
-            <div class="container hero-grid">
+            <div class="container hero-layout">
 
-                <div class="hero-content">
+                <div class="hero-main">
 
-                    <p class="eyebrow">
+                    <div class="eyebrow">
                         SYSTEM ANALYST · PROJECT LEAD · MAINFRAME EXPERT
-                    </p>
+                    </div>
 
                     <h1>
                         Bridging business requirements,
@@ -59,28 +64,22 @@
                         and delivery.
                     </h1>
 
-                    <p class="hero-intro">
+                    <p class="hero-lead">
                         12+ years of enterprise IT experience across healthcare,
-                        mainframe systems, enterprise integration and technology
-                        delivery.
+                        mainframe systems, enterprise integration and technology delivery.
                     </p>
 
-                    <p class="hero-description">
-                        I bring experience across the full technology delivery
-                        lifecycle — from requirements analysis and stakeholder
-                        collaboration through development, testing, release and
-                        production validation.
-                    </p>
+                    <div class="hero-buttons">
 
-                    <div class="hero-actions">
-
-                        <a href="#experience" class="btn btn-primary">
-                            View My Experience
+                        <a href="#experience" class="button primary">
+                            View Experience
                         </a>
 
-                        <a href="documents/Sreyasmon_Shaji_CV.pdf"
-                           class="btn btn-secondary"
-                           target="_blank">
+                        <a
+                            href="documents/Sreyasmon_Shaji_CV.pdf"
+                            class="button secondary"
+                            target="_blank"
+                        >
                             Download CV
                         </a>
 
@@ -89,72 +88,66 @@
                 </div>
 
 
-                <div class="hero-profile">
+                <aside class="hero-card">
 
-                    <div class="profile-panel">
+                    <div class="hero-card-top">
+                        <span>BASED IN</span>
+                        <strong>Stockholm, Sweden</strong>
+                    </div>
 
-                        <div class="profile-label">
-                            BASED IN
-                        </div>
+                    <div class="hero-card-divider"></div>
 
-                        <div class="profile-location">
-                            Stockholm, Sweden
-                        </div>
+                    <div class="hero-focus">
 
-                        <div class="profile-divider"></div>
-
-                        <div class="profile-focus">
-                            <span>Primary Focus</span>
+                        <div>
+                            <small>PRIMARY FOCUS</small>
                             <strong>System Analysis &amp; Enterprise IT</strong>
                         </div>
 
-                        <div class="profile-focus">
-                            <span>Technical Strength</span>
+                        <div>
+                            <small>TECHNICAL STRENGTH</small>
                             <strong>IBM Mainframe &amp; Integration</strong>
                         </div>
 
-                        <div class="profile-focus">
-                            <span>Domain</span>
+                        <div>
+                            <small>DOMAIN</small>
                             <strong>US Healthcare</strong>
                         </div>
 
                     </div>
 
-                </div>
+                </aside>
 
             </div>
 
 
-            <!-- HERO METRICS -->
-            <div class="container metrics-wrapper">
+            <!-- KEY METRICS -->
 
-                <div class="metrics">
+            <div class="container metrics">
 
-                    <div class="metric">
-                        <strong>12+</strong>
-                        <span>Years IT Experience</span>
-                    </div>
+                <div class="metric">
+                    <strong>12+</strong>
+                    <span>Years IT</span>
+                </div>
 
-                    <div class="metric">
-                        <strong>8+</strong>
-                        <span>Years Mainframe</span>
-                    </div>
+                <div class="metric">
+                    <strong>8+</strong>
+                    <span>Years Mainframe</span>
+                </div>
 
-                    <div class="metric">
-                        <strong>10+</strong>
-                        <span>Enterprise Healthcare Applications</span>
-                    </div>
+                <div class="metric">
+                    <strong>10+</strong>
+                    <span>Healthcare Applications</span>
+                </div>
 
-                    <div class="metric">
-                        <strong>100+</strong>
-                        <span>Production Releases</span>
-                    </div>
+                <div class="metric">
+                    <strong>100+</strong>
+                    <span>Production Releases</span>
+                </div>
 
-                    <div class="metric">
-                        <strong>20+</strong>
-                        <span>Production Incidents Resolved</span>
-                    </div>
-
+                <div class="metric">
+                    <strong>20+</strong>
+                    <span>Incidents Resolved</span>
                 </div>
 
             </div>
@@ -165,17 +158,19 @@
         <!-- =========================
              ABOUT
         ========================== -->
-        <section id="about" class="section about-section">
 
-            <div class="container about-grid">
+        <section id="about" class="about section">
 
-                <div class="section-heading">
+            <div class="container split-layout">
 
-                    <p class="section-number">01 / ABOUT</p>
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        01 / ABOUT
+                    </span>
 
                     <h2>
-                        A technology professional
-                        who understands both
+                        A technology professional who understands both
                         <span>systems and delivery.</span>
                     </h2>
 
@@ -184,35 +179,33 @@
 
                 <div class="about-content">
 
-                    <p class="lead">
+                    <p class="large-text">
                         My background combines strong healthcare domain knowledge
                         with hands-on experience in IBM mainframe environments,
-                        enterprise application integration and technology delivery.
+                        enterprise integration and technology delivery.
                     </p>
 
-                    <p>
-                        I have worked across requirements analysis, impact analysis,
-                        development coordination, testing, release management and
-                        production validation. This allows me to work effectively
-                        between business stakeholders, technical teams and
-                        production environments.
-                    </p>
+                    <div class="about-facts">
 
-                    <p>
-                        My experience includes business-critical healthcare
-                        applications involving claims, benefits and membership,
-                        together with legacy modernization and enterprise
-                        integration initiatives.
-                    </p>
+                        <div>
+                            <strong>Requirements</strong>
+                            <span>Analysis &amp; impact assessment</span>
+                        </div>
 
-                    <div class="about-tags">
+                        <div>
+                            <strong>Delivery</strong>
+                            <span>Agile &amp; release coordination</span>
+                        </div>
 
-                        <span>Requirements Analysis</span>
-                        <span>System Analysis</span>
-                        <span>Healthcare IT</span>
-                        <span>Mainframe</span>
-                        <span>Enterprise Integration</span>
-                        <span>Agile Delivery</span>
+                        <div>
+                            <strong>Technology</strong>
+                            <span>Mainframe &amp; enterprise integration</span>
+                        </div>
+
+                        <div>
+                            <strong>Domain</strong>
+                            <span>US healthcare systems</span>
+                        </div>
 
                     </div>
 
@@ -224,24 +217,29 @@
 
 
         <!-- =========================
-             CORE EXPERTISE
+             EXPERTISE
         ========================== -->
-        <section id="skills" class="section expertise-section">
+
+        <section id="expertise" class="expertise section">
 
             <div class="container">
 
-                <div class="section-heading centered">
+                <div class="section-heading-row">
 
-                    <p class="section-number">02 / EXPERTISE</p>
+                    <div>
+                        <span class="section-label">
+                            02 / EXPERTISE
+                        </span>
 
-                    <h2>
-                        Core areas of
-                        <span>expertise</span>
-                    </h2>
+                        <h2>
+                            Core areas of
+                            <span>expertise.</span>
+                        </h2>
+                    </div>
 
                     <p>
-                        A combination of analytical, delivery and technical
-                        capabilities built through enterprise IT experience.
+                        Analytical, technical and delivery capabilities developed
+                        through enterprise IT experience.
                     </p>
 
                 </div>
@@ -249,41 +247,43 @@
 
                 <div class="expertise-grid">
 
-                    <article class="expertise-item">
+                    <article class="expertise-card">
 
-                        <span class="expertise-index">01</span>
+                        <div class="card-number">01</div>
 
-                        <h3>System Analysis &amp; Requirements</h3>
+                        <h3>
+                            System Analysis
+                        </h3>
 
                         <p>
-                            Translating business needs into clear technical
-                            requirements and understanding the impact across
-                            enterprise systems.
+                            Translating business needs into clear requirements
+                            and understanding system-wide impact.
                         </p>
 
-                        <div class="skill-list">
-                            <span>Requirements Analysis</span>
+                        <div class="tags">
+                            <span>Requirements</span>
                             <span>Functional Analysis</span>
                             <span>Impact Analysis</span>
-                            <span>Stakeholder Management</span>
-                            <span>Production Analysis</span>
+                            <span>Stakeholders</span>
                         </div>
 
                     </article>
 
 
-                    <article class="expertise-item">
+                    <article class="expertise-card">
 
-                        <span class="expertise-index">02</span>
+                        <div class="card-number">02</div>
 
-                        <h3>Mainframe &amp; Legacy Systems</h3>
+                        <h3>
+                            Mainframe
+                        </h3>
 
                         <p>
-                            Hands-on experience working with business-critical
-                            IBM mainframe applications and batch environments.
+                            Experience across business-critical IBM mainframe
+                            applications and batch environments.
                         </p>
 
-                        <div class="skill-list">
+                        <div class="tags">
                             <span>COBOL</span>
                             <span>JCL</span>
                             <span>DB2</span>
@@ -296,46 +296,47 @@
                     </article>
 
 
-                    <article class="expertise-item">
+                    <article class="expertise-card">
 
-                        <span class="expertise-index">03</span>
+                        <div class="card-number">03</div>
 
-                        <h3>Project &amp; Agile Delivery</h3>
+                        <h3>
+                            Project &amp; Agile Delivery
+                        </h3>
 
                         <p>
                             Coordinating teams and delivery activities across
-                            analysis, development, testing, release and
-                            implementation.
+                            analysis, development, testing and release.
                         </p>
 
-                        <div class="skill-list">
+                        <div class="tags">
                             <span>Agile</span>
                             <span>Scrum</span>
                             <span>Jira</span>
                             <span>Confluence</span>
                             <span>Release Management</span>
-                            <span>Team Coordination</span>
                         </div>
 
                     </article>
 
 
-                    <article class="expertise-item">
+                    <article class="expertise-card">
 
-                        <span class="expertise-index">04</span>
+                        <div class="card-number">04</div>
 
-                        <h3>Integration &amp; Azure</h3>
+                        <h3>
+                            Integration &amp; Azure
+                        </h3>
 
                         <p>
-                            Experience connecting legacy capabilities with
-                            modern enterprise applications and cloud platforms.
+                            Connecting legacy capabilities with modern enterprise
+                            applications and cloud technologies.
                         </p>
 
-                        <div class="skill-list">
+                        <div class="tags">
                             <span>SOA</span>
                             <span>APIs</span>
                             <span>MQ</span>
-                            <span>Enterprise Integration</span>
                             <span>Azure</span>
                             <span>AZ-104</span>
                         </div>
@@ -352,22 +353,27 @@
         <!-- =========================
              EXPERIENCE
         ========================== -->
-        <section id="experience" class="section experience-section">
+
+        <section id="experience" class="experience section">
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading-row">
 
-                    <p class="section-number">03 / EXPERIENCE</p>
+                    <div>
+                        <span class="section-label">
+                            03 / EXPERIENCE
+                        </span>
 
-                    <h2>
-                        Enterprise experience
-                        built around <span>business-critical systems.</span>
-                    </h2>
+                        <h2>
+                            Enterprise experience built around
+                            <span>business-critical systems.</span>
+                        </h2>
+                    </div>
 
                     <p>
-                        Experience spanning system analysis, software engineering,
-                        project delivery, mainframe systems and production support.
+                        Experience spanning system analysis, project delivery,
+                        mainframe development, integration and production support.
                     </p>
 
                 </div>
@@ -375,42 +381,58 @@
 
                 <div class="experience-layout">
 
-                    <div class="experience-summary">
+                    <!-- LEFT PROFILE -->
 
-                        <div class="experience-company">
+                    <div class="experience-profile">
+
+                        <span class="profile-label">
+                            PROFESSIONAL BACKGROUND
+                        </span>
+
+                        <h3>
                             US Healthcare
-                        </div>
+                        </h3>
 
-                        <div class="experience-domain">
-                            Enterprise Applications
-                        </div>
-
-                        <p>
-                            More than a decade working within the US healthcare
-                            technology ecosystem, supporting enterprise applications
-                            and technology initiatives.
+                        <p class="profile-subtitle">
+                            Enterprise Technology
                         </p>
 
-                        <div class="experience-highlight">
-                            <strong>Elevance Health</strong>
+                        <p>
+                            More than a decade working with enterprise healthcare
+                            applications and technology initiatives.
+                        </p>
+
+                        <div class="client-box">
+
+                            <small>CLIENT EXPERIENCE</small>
+
+                            <strong>
+                                Elevance Health
+                            </strong>
+
                             <span>
-                                Client experience from the WellPoint era through
-                                the evolution to Elevance Health.
+                                Experience extending from the WellPoint era
+                                through the evolution to Elevance Health.
                             </span>
+
                         </div>
 
                     </div>
 
 
-                    <div class="timeline">
+                    <!-- RIGHT EXPERIENCE -->
 
-                        <article class="timeline-item">
+                    <div class="experience-list">
 
-                            <div class="timeline-marker"></div>
+                        <article class="experience-item">
 
-                            <div class="timeline-content">
+                            <div class="experience-number">
+                                01
+                            </div>
 
-                                <span class="timeline-role">
+                            <div>
+
+                                <span class="experience-type">
                                     SYSTEM ANALYST / PROJECT LEAD
                                 </span>
 
@@ -422,11 +444,10 @@
                                     Requirements analysis, stakeholder management,
                                     impact analysis, development coordination,
                                     testing, release management and production
-                                    validation across business-critical healthcare
-                                    applications.
+                                    validation.
                                 </p>
 
-                                <div class="timeline-tags">
+                                <div class="tags">
                                     <span>Healthcare</span>
                                     <span>System Analysis</span>
                                     <span>Agile</span>
@@ -438,28 +459,30 @@
                         </article>
 
 
-                        <article class="timeline-item">
+                        <article class="experience-item">
 
-                            <div class="timeline-marker"></div>
+                            <div class="experience-number">
+                                02
+                            </div>
 
-                            <div class="timeline-content">
+                            <div>
 
-                                <span class="timeline-role">
+                                <span class="experience-type">
                                     MAINFRAME &amp; SOFTWARE ENGINEERING
                                 </span>
 
                                 <h3>
-                                    Legacy Systems &amp; Enterprise Integration
+                                    Legacy Systems &amp; Integration
                                 </h3>
 
                                 <p>
                                     Development and maintenance of enterprise
                                     applications using COBOL, JCL, DB2 and IMS DB,
-                                    including integration between legacy mainframe
-                                    capabilities and modern applications.
+                                    including integration between legacy and
+                                    modern applications.
                                 </p>
 
-                                <div class="timeline-tags">
+                                <div class="tags">
                                     <span>COBOL</span>
                                     <span>JCL</span>
                                     <span>DB2</span>
@@ -472,13 +495,15 @@
                         </article>
 
 
-                        <article class="timeline-item">
+                        <article class="experience-item">
 
-                            <div class="timeline-marker"></div>
+                            <div class="experience-number">
+                                03
+                            </div>
 
-                            <div class="timeline-content">
+                            <div>
 
-                                <span class="timeline-role">
+                                <span class="experience-type">
                                     PRODUCTION &amp; DELIVERY
                                 </span>
 
@@ -487,17 +512,15 @@
                                 </h3>
 
                                 <p>
-                                    Supported production implementations,
-                                    troubleshooting, root-cause analysis,
-                                    incident resolution and technology change
-                                    across enterprise applications.
+                                    Production implementation, troubleshooting,
+                                    root-cause analysis, incident resolution and
+                                    technology change across enterprise systems.
                                 </p>
 
-                                <div class="timeline-tags">
+                                <div class="tags">
                                     <span>Production Support</span>
                                     <span>RCA</span>
                                     <span>Release Management</span>
-                                    <span>Implementation</span>
                                 </div>
 
                             </div>
@@ -516,137 +539,134 @@
         <!-- =========================
              PROJECTS
         ========================== -->
-        <section id="projects" class="section projects-section">
+
+        <section id="projects" class="projects section">
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading-row">
 
-                    <p class="section-number">04 / SELECTED PROJECTS</p>
+                    <div>
+                        <span class="section-label">
+                            04 / SELECTED PROJECTS
+                        </span>
 
-                    <h2>
-                        Selected work across
-                        <span>healthcare &amp; enterprise systems.</span>
-                    </h2>
+                        <h2>
+                            Selected work across
+                            <span>healthcare &amp; enterprise systems.</span>
+                        </h2>
+                    </div>
 
                 </div>
 
 
-                <div class="projects-grid">
+                <div class="project-grid">
 
-                    <article class="project project-featured">
+                    <article class="project-card featured-project">
 
-                        <div class="project-top">
-                            <span class="project-number">01</span>
-                            <span class="project-type">HEALTHCARE</span>
+                        <div class="project-meta">
+                            <span>01</span>
+                            <span>HEALTHCARE</span>
                         </div>
 
-                        <h3>Benefits 24/7</h3>
+                        <h3>
+                            Benefits 24/7
+                        </h3>
 
-                        <p class="project-role">
+                        <strong>
                             System Analyst
-                        </p>
+                        </strong>
 
                         <p>
                             Supported analysis and delivery for a healthcare
-                            benefits application, working across requirements,
-                            impact analysis, development coordination, testing,
+                            benefits application across requirements, impact
+                            analysis, development coordination, testing,
                             release and production validation.
                         </p>
 
-                        <div class="project-tech">
-                            <span>Mainframe</span>
-                            <span>COBOL</span>
-                            <span>JCL</span>
-                            <span>DB2</span>
-                            <span>Python</span>
+                        <div class="project-stack">
+                            COBOL · JCL · DB2 · Python
                         </div>
 
                     </article>
 
 
-                    <article class="project">
+                    <article class="project-card">
 
-                        <div class="project-top">
-                            <span class="project-number">02</span>
-                            <span class="project-type">INTEGRATION</span>
+                        <div class="project-meta">
+                            <span>02</span>
+                            <span>INTEGRATION</span>
                         </div>
 
-                        <h3>SOA API Services</h3>
+                        <h3>
+                            SOA API Services
+                        </h3>
 
-                        <p class="project-role">
+                        <strong>
                             Mainframe &amp; Integration
-                        </p>
+                        </strong>
 
                         <p>
-                            Enterprise services integrating legacy mainframe
-                            capabilities with modern applications, including
-                            production issue analysis and service integration.
+                            Enterprise services connecting legacy mainframe
+                            capabilities with modern applications.
                         </p>
 
-                        <div class="project-tech">
-                            <span>COBOL</span>
-                            <span>JCL</span>
-                            <span>DB2</span>
-                            <span>IMS DB</span>
-                            <span>SOA</span>
+                        <div class="project-stack">
+                            COBOL · JCL · DB2 · IMS DB · SOA
                         </div>
 
                     </article>
 
 
-                    <article class="project">
+                    <article class="project-card">
 
-                        <div class="project-top">
-                            <span class="project-number">03</span>
-                            <span class="project-type">MODERNIZATION</span>
+                        <div class="project-meta">
+                            <span>03</span>
+                            <span>MODERNIZATION</span>
                         </div>
 
-                        <h3>Image Rewrite Project</h3>
+                        <h3>
+                            Image Rewrite Project
+                        </h3>
 
-                        <p class="project-role">
+                        <strong>
                             System Analyst
-                        </p>
+                        </strong>
 
                         <p>
                             System analysis, production support and implementation
-                            coordination within a modernization initiative
-                            involving business-critical enterprise systems.
+                            coordination within a modernization initiative.
                         </p>
 
-                        <div class="project-tech">
-                            <span>Mainframe</span>
-                            <span>Analysis</span>
-                            <span>Production Support</span>
-                            <span>Modernization</span>
+                        <div class="project-stack">
+                            Mainframe · Analysis · Modernization
                         </div>
 
                     </article>
 
 
-                    <article class="project">
+                    <article class="project-card">
 
-                        <div class="project-top">
-                            <span class="project-number">04</span>
-                            <span class="project-type">TEST DATA</span>
+                        <div class="project-meta">
+                            <span>04</span>
+                            <span>TEST DATA</span>
                         </div>
 
-                        <h3>Test Data Management</h3>
+                        <h3>
+                            Test Data Management
+                        </h3>
 
-                        <p class="project-role">
+                        <strong>
                             Mainframe / TDM
-                        </p>
+                        </strong>
 
                         <p>
-                            Experience supporting test data provisioning,
-                            technical problem solving and the development of
-                            capabilities for improved test data management.
+                            Test data provisioning, technical problem solving and
+                            capabilities supporting improved test data management.
                         </p>
 
-                        <div class="project-tech">
-                            <span>IBM z/OS</span>
-                            <span>Mainframe</span>
-                            <span>TDM</span>
+                        <div class="project-stack">
+                            z/OS · Mainframe · TDM
                         </div>
 
                     </article>
@@ -659,15 +679,18 @@
 
 
         <!-- =========================
-             HEALTHCARE DOMAIN
+             HEALTHCARE
         ========================== -->
-        <section class="domain-section">
 
-            <div class="container domain-grid">
+        <section class="healthcare section">
 
-                <div class="domain-heading">
+            <div class="container healthcare-layout">
 
-                    <p class="section-number">05 / DOMAIN</p>
+                <div>
+
+                    <span class="section-label">
+                        05 / DOMAIN
+                    </span>
 
                     <h2>
                         Deep experience in
@@ -677,40 +700,34 @@
                 </div>
 
 
-                <div class="domain-content">
+                <div>
 
-                    <p class="domain-lead">
+                    <p class="healthcare-lead">
                         Over a decade of experience working on enterprise
                         healthcare applications in the US healthcare domain.
                     </p>
 
-                    <p>
-                        Experience includes applications involving claims,
-                        benefits and membership, together with production support,
-                        system integration, requirements analysis and technology
-                        change.
-                    </p>
 
-                    <div class="domain-areas">
+                    <div class="domain-grid">
 
-                        <div>
+                        <div class="domain-item">
                             <strong>Claims</strong>
                             <span>Business-critical processing</span>
                         </div>
 
-                        <div>
+                        <div class="domain-item">
                             <strong>Benefits</strong>
-                            <span>Benefits applications &amp; systems</span>
+                            <span>Benefits applications</span>
                         </div>
 
-                        <div>
+                        <div class="domain-item">
                             <strong>Membership</strong>
                             <span>Enterprise member systems</span>
                         </div>
 
-                        <div>
+                        <div class="domain-item">
                             <strong>Integration</strong>
-                            <span>Legacy &amp; modern applications</span>
+                            <span>Legacy ↔ modern applications</span>
                         </div>
 
                     </div>
@@ -723,104 +740,64 @@
 
 
         <!-- =========================
-             HOW I WORK
+             PROCESS
         ========================== -->
-        <section class="process-section">
+
+        <section class="process section">
 
             <div class="container">
 
-                <div class="section-heading centered light">
+                <div class="process-heading">
 
-                    <p class="section-number">06 / APPROACH</p>
+                    <span class="section-label">
+                        06 / APPROACH
+                    </span>
 
                     <h2>
-                        How I work
+                        How I work.
                     </h2>
-
-                    <p>
-                        Turning complex requirements into controlled,
-                        validated technology delivery.
-                    </p>
 
                 </div>
 
 
-                <div class="process">
+                <div class="process-flow">
 
-                    <div class="process-step">
-
+                    <div>
                         <span>01</span>
-
-                        <h3>Understand</h3>
-
-                        <p>
-                            Business needs and stakeholder expectations.
-                        </p>
-
+                        <strong>Understand</strong>
+                        <small>Business needs</small>
                     </div>
 
+                    <i></i>
 
-                    <div class="process-line"></div>
-
-
-                    <div class="process-step">
-
+                    <div>
                         <span>02</span>
-
-                        <h3>Analyse</h3>
-
-                        <p>
-                            Requirements, dependencies, data flows and impact.
-                        </p>
-
+                        <strong>Analyse</strong>
+                        <small>Requirements &amp; impact</small>
                     </div>
 
+                    <i></i>
 
-                    <div class="process-line"></div>
-
-
-                    <div class="process-step">
-
+                    <div>
                         <span>03</span>
-
-                        <h3>Coordinate</h3>
-
-                        <p>
-                            Business, development and testing teams.
-                        </p>
-
+                        <strong>Coordinate</strong>
+                        <small>Teams &amp; delivery</small>
                     </div>
 
+                    <i></i>
 
-                    <div class="process-line"></div>
-
-
-                    <div class="process-step">
-
+                    <div>
                         <span>04</span>
-
-                        <h3>Deliver</h3>
-
-                        <p>
-                            Agile execution and release management.
-                        </p>
-
+                        <strong>Deliver</strong>
+                        <small>Agile &amp; release</small>
                     </div>
 
+                    <i></i>
 
-                    <div class="process-line"></div>
-
-
-                    <div class="process-step">
-
+                    <div>
                         <span>05</span>
-
-                        <h3>Validate</h3>
-
-                        <p>
-                            Production implementation and validation.
-                        </p>
-
+                        <strong>Validate</strong>
+                        <small>Production outcome</small>
                     </div>
 
                 </div>
@@ -833,71 +810,53 @@
         <!-- =========================
              TECHNOLOGY
         ========================== -->
-        <section class="section technology-section">
 
-            <div class="container technology-grid">
+        <section class="technology section">
 
-                <div class="section-heading">
+            <div class="container technology-layout">
 
-                    <p class="section-number">07 / TECHNOLOGY</p>
+                <div>
+
+                    <span class="section-label">
+                        07 / TECHNOLOGY
+                    </span>
 
                     <h2>
                         Technology
-                        <span>landscape</span>
+                        <span>landscape.</span>
                     </h2>
-
-                    <p>
-                        A practical technology background spanning legacy
-                        platforms, integration and modern cloud technologies.
-                    </p>
 
                 </div>
 
 
-                <div class="technology-list">
+                <div class="technology-table">
 
-                    <div class="technology-group">
-
-                        <h3>Mainframe</h3>
-
-                        <p>
+                    <div>
+                        <strong>Mainframe</strong>
+                        <span>
                             COBOL · JCL · DB2 · IMS DB · CICS · VSAM · z/OS
-                        </p>
-
+                        </span>
                     </div>
 
-
-                    <div class="technology-group">
-
-                        <h3>Integration</h3>
-
-                        <p>
+                    <div>
+                        <strong>Integration</strong>
+                        <span>
                             SOA · APIs · MQ · Enterprise Integration
-                        </p>
-
+                        </span>
                     </div>
 
-
-                    <div class="technology-group">
-
-                        <h3>Cloud &amp; Modern</h3>
-
-                        <p>
+                    <div>
+                        <strong>Cloud &amp; Modern</strong>
+                        <span>
                             Microsoft Azure · AZ-104 · Python · SQL
-                        </p>
-
+                        </span>
                     </div>
 
-
-                    <div class="technology-group">
-
-                        <h3>Delivery</h3>
-
-                        <p>
-                            Agile · Scrum · Jira · Confluence ·
-                            Requirements Engineering
-                        </p>
-
+                    <div>
+                        <strong>Delivery</strong>
+                        <span>
+                            Agile · Scrum · Jira · Confluence · Requirements Engineering
+                        </span>
                     </div>
 
                 </div>
@@ -910,55 +869,49 @@
         <!-- =========================
              CREDENTIALS
         ========================== -->
-        <section class="credentials-section">
 
-            <div class="container credentials-grid">
+        <section class="credentials section">
+
+            <div class="container credentials-layout">
 
                 <div>
 
-                    <p class="section-number">08 / CREDENTIALS</p>
+                    <span class="section-label">
+                        08 / CREDENTIALS
+                    </span>
 
                     <h2>
                         Education &amp;
-                        <span>certification</span>
+                        <span>certification.</span>
                     </h2>
 
                 </div>
 
 
-                <div class="credentials">
+                <div class="credential-list">
 
                     <div class="credential">
+                        <span>CERTIFICATION</span>
 
-                        <div class="credential-year">
-                            CERTIFICATION
-                        </div>
-
-                        <h3>
+                        <strong>
                             Microsoft Azure Administrator Associate
-                        </h3>
+                        </strong>
 
-                        <p>
+                        <small>
                             AZ-104
-                        </p>
-
+                        </small>
                     </div>
 
-
                     <div class="credential">
+                        <span>EDUCATION</span>
 
-                        <div class="credential-year">
-                            EDUCATION
-                        </div>
-
-                        <h3>
+                        <strong>
                             Master of Computer Applications
-                        </h3>
+                        </strong>
 
-                        <p>
+                        <small>
                             MCA
-                        </p>
-
+                        </small>
                     </div>
 
                 </div>
@@ -969,52 +922,53 @@
 
 
         <!-- =========================
-             CONTACT CTA
+             CONTACT
         ========================== -->
-        <section id="contact" class="contact-section">
 
-            <div class="container">
+        <section id="contact" class="contact">
 
-                <div class="contact-card">
+            <div class="container contact-box">
 
-                    <div class="contact-content">
+                <div>
 
-                        <p class="section-number">
-                            09 / LET'S CONNECT
-                        </p>
+                    <span class="section-label">
+                        09 / LET'S CONNECT
+                    </span>
 
-                        <h2>
-                            Looking for opportunities
-                            <span>in Sweden.</span>
-                        </h2>
+                    <h2>
+                        Looking for opportunities
+                        <span>in Sweden.</span>
+                    </h2>
 
-                        <p>
-                            Interested in opportunities across System Analysis,
-                            Project Leadership, Mainframe, Healthcare IT,
-                            Business Analysis and enterprise technology delivery.
-                        </p>
+                    <p>
+                        Interested in opportunities across System Analysis,
+                        Project Leadership, Mainframe, Healthcare IT,
+                        Business Analysis and enterprise technology delivery.
+                    </p>
 
-                    </div>
+                </div>
 
 
-                    <div class="contact-actions">
+                <div class="contact-actions">
 
-                        <a href="documents/Sreyasmon_Shaji_CV.pdf"
-                           class="btn btn-primary"
-                           target="_blank">
-                            Download CV
-                        </a>
+                    <a
+                        href="documents/Sreyasmon_Shaji_CV.pdf"
+                        class="button primary"
+                        target="_blank"
+                    >
+                        Download CV
+                    </a>
 
-                        <a href="#"
-                           class="btn btn-outline-light">
-                            LinkedIn
-                        </a>
+                    <a
+                        href="#"
+                        class="button secondary"
+                    >
+                        LinkedIn
+                    </a>
 
-                    </div>
-
-                    <div class="contact-location">
+                    <small>
                         Stockholm, Sweden
-                    </div>
+                    </small>
 
                 </div>
 
@@ -1028,9 +982,10 @@
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer class="site-footer">
 
-        <div class="container footer-content">
+    <footer>
+
+        <div class="container footer-inner">
 
             <div>
                 <strong>SREYASMON SHAJI</strong>
@@ -1039,14 +994,13 @@
                 </span>
             </div>
 
-            <div>
+            <span>
                 © 2026 Sreyasmon Shaji
-            </div>
+            </span>
 
         </div>
 
     </footer>
-
 
 </body>
 </html>

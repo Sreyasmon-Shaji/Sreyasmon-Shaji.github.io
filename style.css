@@ -100,7 +100,7 @@ a {
     min-height: 480px;
     background: var(--navy);
     color: #fff;
-    padding: 100px 5vw 40px;
+    padding: 88px 5vw 32px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -166,7 +166,7 @@ a {
 
 .hero-orbit {
     position: relative;
-    width: min(400px, 34vw);
+    width: min(440px, 37vw);
     aspect-ratio: 1;
     margin: 0 auto 0 0;
     min-width: 0;
@@ -184,18 +184,19 @@ a {
 .orbit-ring-one {
     width: 64%;
     height: 64%;
+    border-color: rgba(255,255,255,0.22);
 }
 
 .orbit-ring-two {
     width: 90%;
     height: 90%;
-    border-color: rgba(36,119,255,0.3);
+    border-color: rgba(36,119,255,0.45);
 }
 
 .orbit-core {
     position: absolute;
-    width: 142px;
-    height: 142px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: var(--lime);
     color: var(--dark);
@@ -206,17 +207,18 @@ a {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    box-shadow: 0 0 0 10px rgba(215,255,69,0.08);
 }
 
 .orbit-core strong {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 44px;
+    font-size: 50px;
     line-height: 1;
     letter-spacing: -0.08em;
 }
 
 .orbit-core span {
-    font-size: 7px;
+    font-size: 7.5px;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 0.12em;
@@ -224,13 +226,14 @@ a {
 
 .orbit-label {
     position: absolute;
-    padding: 7px 9px;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(11,24,36,0.85);
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(11,24,36,0.96);
     backdrop-filter: blur(5px);
-    font-size: 6.8px;
+    font-size: 7.6px;
     font-weight: 800;
     letter-spacing: 0.1em;
+    color: #fff;
     white-space: nowrap;
 }
 
@@ -281,7 +284,7 @@ a {
 
 .hero-bottom {
     max-width: var(--max-width);
-    margin: 24px auto 0;
+    margin: 16px auto 0;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -353,12 +356,12 @@ a {
 
 .positioning-strip {
     flex-shrink: 0;
-    min-height: 120px;
+    min-height: 110px;
     background: var(--lime);
     display: grid;
     grid-template-columns: 1fr 1px 1.3fr 1px 1.5fr;
     align-items: center;
-    padding: 22px 5vw;
+    padding: 18px 5vw;
     gap: 30px;
 }
 

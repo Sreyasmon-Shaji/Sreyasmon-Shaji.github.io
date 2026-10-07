@@ -248,9 +248,11 @@ a {
     left: -7%;
 }
 
+/* AGILE DELIVERY — adjusted to prevent overlap with SHAJI */
 .label-seven {
     top: 45%;
-    left: -13%;
+    left: -8%;
+    transform: translateY(12%);
 }
 
 .label-eight {
@@ -1250,6 +1252,12 @@ a {
         margin: 20px auto 0;
     }
 
+    /* AGILE DELIVERY — keep clear of hero heading */
+    .label-seven {
+        left: -2%;
+        transform: translateY(12%);
+    }
+
     .hero-bottom {
         margin-top: 20px;
     }
@@ -1354,9 +1362,14 @@ a {
         right: -2%;
     }
 
-    .label-six,
-    .label-seven {
+    .label-six {
         left: -2%;
+    }
+
+    /* AGILE DELIVERY — keep clear of hero heading */
+    .label-seven {
+        left: 1%;
+        transform: translateY(15%);
     }
 
     .hero-bottom {
@@ -1659,8 +1672,10 @@ a {
         left: -8%;
     }
 
+    /* AGILE DELIVERY — final small-screen adjustment */
     .label-seven {
-        left: -8%;
+        left: -5%;
+        transform: translateY(15%);
     }
 
     .label-eight {

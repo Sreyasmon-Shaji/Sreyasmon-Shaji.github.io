@@ -713,21 +713,24 @@ a {
     background: #111b22;
 }
 
-/*
-    SOA API SERVICES
-    Extra height accommodates the longer integration description
-    and key achievements without overlapping the metadata.
-*/
+
+/* SOA API SERVICES */
+
 .project-card.project-soa {
     min-height: 800px;
 }
 
-/*
-    IMAGE REWRITE
-    Extra height accommodates the detailed Mainframe development
-    description, achievement and technology tags.
-*/
+
+/* IMAGE REWRITE */
+
 .project-card.project-image {
+    min-height: 800px;
+}
+
+
+/* TEST DATA MANAGEMENT */
+
+.project-card.project-tdm {
     min-height: 800px;
 }
 
@@ -1487,7 +1490,8 @@ a {
     .project-card,
     .project-card.project-large,
     .project-card.project-soa,
-    .project-card.project-image {
+    .project-card.project-image,
+    .project-card.project-tdm {
         min-height: 480px;
     }
 
@@ -1530,7 +1534,8 @@ a {
     .project-benefits .project-meta,
     .project-claims .project-meta,
     .project-soa .project-meta,
-    .project-image .project-meta {
+    .project-image .project-meta,
+    .project-tdm .project-meta {
         position: relative;
     }
 

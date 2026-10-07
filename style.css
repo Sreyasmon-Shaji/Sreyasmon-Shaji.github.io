@@ -106,6 +106,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1.5px);
+    background-size: 26px 26px;
 }
 
 .hero::after {
@@ -313,6 +315,35 @@ a {
 .label-eight {
     top: 17%;
     left: 2%;
+}
+
+.hero-deco {
+    position: absolute;
+    right: 3.5vw;
+    top: 12%;
+    bottom: 12%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-deco-line {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.16), transparent);
+    flex-shrink: 0;
+}
+
+.hero-deco-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    color: rgba(255,255,255,0.24);
+    white-space: nowrap;
 }
 
 .hero-bottom {

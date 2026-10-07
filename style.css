@@ -111,7 +111,7 @@ a {
     margin: auto;
     min-height: 580px;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
     gap: 50px;
 }
@@ -119,6 +119,7 @@ a {
 .hero-copy {
     position: relative;
     z-index: 3;
+    min-width: 0;
 }
 
 .eyebrow {
@@ -131,9 +132,9 @@ a {
 
 .hero h1 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(82px, 11vw, 180px);
-    line-height: 0.79;
-    letter-spacing: -0.085em;
+    font-size: clamp(44px, 6vw, 130px);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
     font-weight: 600;
 }
 
@@ -151,9 +152,10 @@ a {
 
 .hero-orbit {
     position: relative;
-    width: min(560px, 44vw);
+    width: min(420px, 36vw);
     aspect-ratio: 1;
     margin-left: auto;
+    min-width: 0;
 }
 
 .orbit-ring {
@@ -1267,15 +1269,13 @@ a {
 }
 
 
-/* HERO — stack name + orbit instead of side-by-side.
-   The hero heading scales with viewport width (clamp uses vw), so at
-   normal laptop/desktop widths (roughly 1050–1800px) a side-by-side
-   layout doesn't have room for both the full-size heading AND the
-   orbit graphic — the orbit's box gets pushed outside the right edge
-   of the page. Stacking avoids that at every width below ultra-wide
-   monitors, where there's enough room for both side by side. */
+/* TABLET */
 
-@media (max-width: 1850px) {
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 16px;
+    }
 
     .hero {
         min-height: 800px;
@@ -1293,16 +1293,6 @@ a {
 
     .hero-bottom {
         margin-top: 20px;
-    }
-}
-
-
-/* TABLET */
-
-@media (max-width: 1050px) {
-
-    .main-nav {
-        gap: 16px;
     }
 
     .about-grid {

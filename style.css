@@ -699,22 +699,9 @@ a {
     min-height: 1000px;
 }
 
-/*
-    BENEFITS 24/7
-    Explicitly dark so the complete content has strong contrast.
-*/
 .project-card.project-benefits {
     background: var(--navy);
     color: #fff;
-}
-
-/*
-    SOA API SERVICES
-    Extra height accommodates the longer integration description,
-    achievements and tag set without colliding with project metadata.
-*/
-.project-card.project-soa {
-    min-height: 800px;
 }
 
 .project-card.project-accent {
@@ -724,6 +711,24 @@ a {
 
 .project-card.project-dark {
     background: #111b22;
+}
+
+/*
+    SOA API SERVICES
+    Extra height accommodates the longer integration description
+    and key achievements without overlapping the metadata.
+*/
+.project-card.project-soa {
+    min-height: 800px;
+}
+
+/*
+    IMAGE REWRITE
+    Extra height accommodates the detailed Mainframe development
+    description, achievement and technology tags.
+*/
+.project-card.project-image {
+    min-height: 800px;
 }
 
 .project-top {
@@ -770,12 +775,10 @@ a {
     color: #c3cdd4;
 }
 
-/* Claims / lime card */
 .project-accent p {
     color: rgba(16,24,32,0.78);
 }
 
-/* Benefits must remain light on dark navy */
 .project-benefits p {
     color: #cbd5db;
 }
@@ -832,22 +835,16 @@ a {
     white-space: normal;
 }
 
-/* Benefits tags */
 .project-benefits .project-tags span {
     border-color: rgba(255,255,255,0.25);
     color: rgba(255,255,255,0.86);
 }
 
-/* Claims tags */
 .project-accent .project-tags span {
     border-color: rgba(16,24,32,0.28);
     color: rgba(16,24,32,0.82);
 }
 
-/*
-    Prevent LEGACY-TO-MODERN from behaving like a text decoration.
-    It is allowed to wrap as a normal tag and remains fully visible.
-*/
 .project-claims .project-tags .tag-long {
     white-space: nowrap;
     text-decoration: none;
@@ -1488,16 +1485,14 @@ a {
     }
 
     .project-card,
-    .project-card.project-large {
+    .project-card.project-large,
+    .project-card.project-soa,
+    .project-card.project-image {
         min-height: 480px;
     }
 
     .project-card.project-large {
         grid-row: auto;
-        min-height: auto;
-    }
-
-    .project-card.project-soa {
         min-height: auto;
     }
 
@@ -1534,7 +1529,8 @@ a {
 
     .project-benefits .project-meta,
     .project-claims .project-meta,
-    .project-soa .project-meta {
+    .project-soa .project-meta,
+    .project-image .project-meta {
         position: relative;
     }
 

@@ -87,10 +87,10 @@ a {
 /* HERO */
 
 .hero {
-    min-height: 900px;
+    min-height: 680px;
     background: var(--navy);
     color: #fff;
-    padding: 150px 5vw 70px;
+    padding: 140px 5vw 60px;
     position: relative;
     overflow: hidden;
 }
@@ -109,11 +109,11 @@ a {
 .hero-grid {
     max-width: var(--max-width);
     margin: auto;
-    min-height: 580px;
+    min-height: 400px;
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .hero-copy {
@@ -154,7 +154,7 @@ a {
     position: relative;
     width: min(420px, 36vw);
     aspect-ratio: 1;
-    margin-left: auto;
+    margin: 0 auto 0 0;
     min-width: 0;
 }
 

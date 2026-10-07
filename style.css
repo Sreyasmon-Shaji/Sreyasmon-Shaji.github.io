@@ -106,8 +106,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1.5px);
-    background-size: 26px 26px;
+    background-image: radial-gradient(rgba(255,255,255,0.14) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
 }
 
 .hero::after {
@@ -317,33 +317,76 @@ a {
     left: 2%;
 }
 
-.hero-deco {
+.hero-terminal {
     position: absolute;
-    right: 3.5vw;
-    top: 12%;
-    bottom: 12%;
-    display: flex;
-    align-items: center;
-    gap: 14px;
+    right: 3.2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(150px, 13vw);
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.035);
+    border-radius: 6px;
+    overflow: hidden;
     z-index: 1;
     pointer-events: none;
 }
 
-.hero-deco-line {
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.16), transparent);
-    flex-shrink: 0;
+.terminal-head {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 9px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.02);
 }
 
-.hero-deco-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 9px;
+.terminal-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+}
+
+.terminal-title {
+    margin-left: 2px;
+    font-size: 5.5px;
     font-weight: 800;
-    letter-spacing: 0.35em;
-    color: rgba(255,255,255,0.24);
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
     white-space: nowrap;
+}
+
+.terminal-body {
+    padding: 9px 10px 10px;
+}
+
+.terminal-body p {
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    line-height: 1.9;
+    color: rgba(215,255,69,0.75);
+    white-space: nowrap;
+}
+
+.terminal-prompt {
+    color: rgba(255,255,255,0.35);
+    margin-right: 6px;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    background: var(--lime);
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: cursorBlink 1s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-bottom {
@@ -1388,6 +1431,15 @@ a {
 .footer-right {
     text-align: right;
     color: rgba(255,255,255,0.4);
+}
+
+
+/* Hide the terminal card once the orbit column gets too narrow for it
+   to sit beside the orbit without overlapping. */
+@media (max-width: 1360px) {
+    .hero-terminal {
+        display: none;
+    }
 }
 
 

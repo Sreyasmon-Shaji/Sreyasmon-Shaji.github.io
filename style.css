@@ -276,6 +276,38 @@ a {
     z-index: 3;
 }
 
+.hero-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.hero-photo-frame {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--lime);
+    z-index: 0;
+}
+
+.hero-photo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    background: var(--navy);
+}
+
 .hero-bottom p {
     max-width: 620px;
     color: #c3cdd4;

@@ -84,15 +84,28 @@ a {
 }
 
 
+/* ABOVE THE FOLD (hero + positioning strip, sized to the viewport) */
+
+.above-fold {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* HERO */
 
 .hero {
-    min-height: 680px;
+    flex: 1;
+    min-height: 480px;
     background: var(--navy);
     color: #fff;
-    padding: 140px 5vw 60px;
+    padding: 100px 5vw 40px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero::after {
@@ -108,8 +121,9 @@ a {
 
 .hero-grid {
     max-width: var(--max-width);
-    margin: auto;
-    min-height: 400px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 300px;
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
@@ -152,7 +166,7 @@ a {
 
 .hero-orbit {
     position: relative;
-    width: min(420px, 36vw);
+    width: min(360px, 32vw);
     aspect-ratio: 1;
     margin: 0 auto 0 0;
     min-width: 0;
@@ -180,8 +194,8 @@ a {
 
 .orbit-core {
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     background: var(--lime);
     color: var(--dark);
@@ -196,7 +210,7 @@ a {
 
 .orbit-core strong {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 55px;
+    font-size: 40px;
     line-height: 1;
     letter-spacing: -0.08em;
 }
@@ -210,13 +224,13 @@ a {
 
 .orbit-label {
     position: absolute;
-    padding: 7px 10px;
+    padding: 6px 8px;
     border: 1px solid rgba(255,255,255,0.2);
     background: rgba(11,24,36,0.85);
     backdrop-filter: blur(5px);
-    font-size: 7px;
+    font-size: 6.2px;
     font-weight: 800;
-    letter-spacing: 0.11em;
+    letter-spacing: 0.09em;
     white-space: nowrap;
 }
 
@@ -267,7 +281,7 @@ a {
 
 .hero-bottom {
     max-width: var(--max-width);
-    margin: 35px auto 0;
+    margin: 24px auto 0;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -333,13 +347,14 @@ a {
 /* POSITIONING */
 
 .positioning-strip {
-    min-height: 150px;
+    flex-shrink: 0;
+    min-height: 120px;
     background: var(--lime);
     display: grid;
     grid-template-columns: 1fr 1px 1.3fr 1px 1.5fr;
     align-items: center;
-    padding: 30px 5vw;
-    gap: 35px;
+    padding: 22px 5vw;
+    gap: 30px;
 }
 
 .positioning-item {
@@ -350,7 +365,7 @@ a {
 
 .positioning-item > span {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 0.8;
     font-weight: 600;
     letter-spacing: -0.07em;
@@ -369,7 +384,7 @@ a {
 }
 
 .positioning-divider {
-    height: 60px;
+    height: 44px;
     width: 1px;
     background: rgba(16,24,32,0.2);
 }
@@ -1305,12 +1320,18 @@ a {
 
 @media (max-width: 1050px) {
 
+    .above-fold {
+        display: block;
+        min-height: auto;
+    }
+
     .main-nav {
         gap: 16px;
     }
 
     .hero {
         min-height: 800px;
+        display: block;
     }
 
     .hero-grid {

@@ -100,7 +100,7 @@ a {
     min-height: 480px;
     background: var(--navy);
     color: #fff;
-    padding: 88px 5vw 32px;
+    padding: 82px 5vw 24px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -285,6 +285,7 @@ a {
 .hero-bottom {
     max-width: var(--max-width);
     margin: 16px auto 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -319,8 +320,8 @@ a {
     position: relative;
     z-index: 1;
     display: block;
-    width: 86px;
-    height: 86px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
     background: var(--navy);
 }
@@ -333,8 +334,10 @@ a {
 }
 
 .hero-bottom p strong {
-    color: #fff;
+    color: var(--lime);
     font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .hero-link {

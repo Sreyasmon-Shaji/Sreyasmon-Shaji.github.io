@@ -218,6 +218,10 @@ a {
     white-space: nowrap;
 }
 
+/* All orbit labels are kept INSIDE the orbit's own box (0%–100%)
+   so they can never be pushed past the edge of the viewport on
+   narrower desktop widths. */
+
 .label-one {
     top: 5%;
     left: 38%;
@@ -225,17 +229,17 @@ a {
 
 .label-two {
     top: 17%;
-    right: -2%;
+    right: 4%;
 }
 
 .label-three {
     top: 42%;
-    right: -13%;
+    right: 2%;
 }
 
 .label-four {
     bottom: 22%;
-    right: -4%;
+    right: 4%;
 }
 
 .label-five {
@@ -245,19 +249,18 @@ a {
 
 .label-six {
     bottom: 17%;
-    left: -7%;
+    left: 2%;
 }
 
-/* AGILE DELIVERY — adjusted to prevent overlap with SHAJI */
 .label-seven {
     top: 45%;
-    left: -8%;
+    left: 2%;
     transform: translateY(12%);
 }
 
 .label-eight {
     top: 17%;
-    left: -4%;
+    left: 2%;
 }
 
 .hero-bottom {
@@ -1264,13 +1267,15 @@ a {
 }
 
 
-/* TABLET */
+/* HERO — stack name + orbit instead of side-by-side.
+   The hero heading scales with viewport width (clamp uses vw), so at
+   normal laptop/desktop widths (roughly 1050–1800px) a side-by-side
+   layout doesn't have room for both the full-size heading AND the
+   orbit graphic — the orbit's box gets pushed outside the right edge
+   of the page. Stacking avoids that at every width below ultra-wide
+   monitors, where there's enough room for both side by side. */
 
-@media (max-width: 1050px) {
-
-    .main-nav {
-        gap: 16px;
-    }
+@media (max-width: 1850px) {
 
     .hero {
         min-height: 800px;
@@ -1286,14 +1291,18 @@ a {
         margin: 20px auto 0;
     }
 
-    /* AGILE DELIVERY — keep clear of hero heading */
-    .label-seven {
-        left: -2%;
-        transform: translateY(12%);
-    }
-
     .hero-bottom {
         margin-top: 20px;
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 16px;
     }
 
     .about-grid {
@@ -1396,18 +1405,7 @@ a {
         padding: 5px 6px;
     }
 
-    .label-three,
-    .label-four {
-        right: -2%;
-    }
-
-    .label-six {
-        left: -2%;
-    }
-
-    /* AGILE DELIVERY — keep clear of hero heading */
     .label-seven {
-        left: 1%;
         transform: translateY(15%);
     }
 
@@ -1705,29 +1703,28 @@ a {
     }
 
     .label-two {
-        right: -5%;
+        right: 6%;
     }
 
     .label-three {
-        right: -8%;
+        right: 4%;
     }
 
     .label-four {
-        right: -6%;
+        right: 6%;
     }
 
     .label-six {
-        left: -8%;
+        left: 6%;
     }
 
-    /* AGILE DELIVERY — final small-screen adjustment */
     .label-seven {
-        left: -5%;
+        left: 6%;
         transform: translateY(15%);
     }
 
     .label-eight {
-        left: -5%;
+        left: 6%;
     }
 
     .project-card {

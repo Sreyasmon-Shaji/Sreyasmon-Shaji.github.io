@@ -708,6 +708,15 @@ a {
     color: #fff;
 }
 
+/*
+    SOA API SERVICES
+    Extra height accommodates the longer integration description,
+    achievements and tag set without colliding with project metadata.
+*/
+.project-card.project-soa {
+    min-height: 800px;
+}
+
 .project-card.project-accent {
     background: var(--lime);
     color: var(--dark);
@@ -1488,6 +1497,10 @@ a {
         min-height: auto;
     }
 
+    .project-card.project-soa {
+        min-height: auto;
+    }
+
     .project-top {
         margin-bottom: 55px;
     }
@@ -1520,7 +1533,8 @@ a {
     }
 
     .project-benefits .project-meta,
-    .project-claims .project-meta {
+    .project-claims .project-meta,
+    .project-soa .project-meta {
         position: relative;
     }
 

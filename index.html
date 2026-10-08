@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261028">
+    <link rel="stylesheet" href="style.css?v=20261030">
 </head>
 
 <body>
@@ -29,6 +29,7 @@
                 <a href="#experience">EXPERIENCE</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#domain">DOMAIN</a>
+                <a href="#dataflow">DATA FLOW</a>
                 <a href="#technology">TECHNOLOGY</a>
                 <a href="#contact">CONTACT</a>
             </nav>
@@ -960,95 +961,261 @@
         </section>
 
 
+        <!-- DATA FLOW -->
+        <section class="flow-section" id="dataflow">
+
+            <div class="flow-inner">
+
+                <div class="flow-head">
+                    <div>
+                        <div class="about-eyebrow">DATA FLOW</div>
+
+                        <h2>
+                            Beyond the<br>
+                            <em>mainframe.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        How core mainframe data reaches the people who use it: eHub
+                        carries claims and membership data, through ETL and batch
+                        loads, from DB2 and other mainframe databases out to the
+                        Member, Provider and Broker portals.
+                    </p>
+                </div>
+
+                <div class="flow-map" aria-label="How mainframe data flows through eHub to the portals">
+
+                    <!-- 1 SOURCE -->
+                    <div class="flow-title fc1">
+                        <span class="flow-kicker">SOURCE</span><span class="flow-mark flow-mark-ctx">CONTEXT</span>
+                        <h3>Mainframe<br>data</h3>
+                    </div>
+
+                    <div class="flow-body flow-ctx fc1">
+                        <div class="flow-dbs">
+                            <div class="flow-db">
+                                <svg class="flow-cyl" viewBox="0 0 48 56" aria-hidden="true"><ellipse cx="24" cy="10" rx="20" ry="7"/><path d="M4 10v32c0 4 9 7 20 7s20-3 20-7V10"/><path d="M4 26c0 4 9 7 20 7s20-3 20-7"/></svg>
+                                <span>DB2 TABLES</span>
+                            </div>
+                            <div class="flow-db">
+                                <svg class="flow-cyl" viewBox="0 0 48 56" aria-hidden="true"><ellipse cx="24" cy="10" rx="20" ry="7"/><path d="M4 10v32c0 4 9 7 20 7s20-3 20-7V10"/><path d="M4 26c0 4 9 7 20 7s20-3 20-7"/></svg>
+                                <span>MAINFRAME DATABASES</span>
+                            </div>
+                        </div>
+                        <p>Core systems of record. Only the data the portals need is pulled out.</p>
+                    </div>
+
+                    <div class="flow-link fc2"></div>
+
+                    <!-- 2 LOAD -->
+                    <div class="flow-title fc3">
+                        <span class="flow-kicker">ETL</span><span class="flow-mark flow-mark-hands">HANDS-ON</span>
+                        <h3>ETL &amp;<br>batch loads</h3>
+                    </div>
+
+                    <div class="flow-body flow-hands fc3">
+                        <div class="flow-etl" aria-label="Extract, transform, load">
+                            <span>E</span><i></i><span>T</span><i></i><span>L</span>
+                        </div>
+                        <div class="flow-etl-cap">EXTRACT · TRANSFORM · LOAD</div>
+                        <div class="flow-jobs">
+                            <div class="flow-job">
+                                <svg class="flow-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <span>SCHEDULED JCL BATCH JOBS</span>
+                            </div>
+                            <div class="flow-job">
+                                <svg class="flow-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-2 8 11-13h-7z"/></svg>
+                                <span>AD-HOC DATA REQUESTS</span>
+                            </div>
+                        </div>
+                        <p>ETL moves the data into eHub tables through JCL batch jobs, scheduled or run on request.</p>
+                    </div>
+
+                    <div class="flow-link fc4"></div>
+
+                    <!-- 3 HUB -->
+                    <div class="flow-title fc5">
+                        <span class="flow-kicker">HUB</span><span class="flow-mark flow-mark-hands">HANDS-ON</span>
+                        <h3>eHub</h3>
+                    </div>
+
+                    <div class="flow-body flow-hands fc5">
+                        <div class="flow-hub-art">
+                            <div class="flow-hub-core">
+                                <div>
+                                    <strong>eHub</strong>
+                                    <span>TABLES</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-hub-chips">
+                            <span>CLAIMS DATA</span>
+                            <span>MEMBERSHIP DATA</span>
+                        </div>
+                        <div class="flow-soa">SOA INTEGRATION</div>
+                        <p>An integration layer serving downstream applications.</p>
+                    </div>
+
+                    <div class="flow-link flow-fan fc6">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                            <path d="M0 50 C55 50 45 12.5 100 12.5"/>
+                            <path d="M0 50 C55 50 45 37.5 100 37.5"/>
+                            <path d="M0 50 C55 50 45 62.5 100 62.5"/>
+                            <path d="M0 50 C55 50 45 87.5 100 87.5"/>
+                        </svg>
+                    </div>
+
+                    <!-- 4 CONSUMERS -->
+                    <div class="flow-title fc7">
+                        <span class="flow-kicker">CONSUMERS</span><span class="flow-mark flow-mark-ctx">CONTEXT</span>
+                        <h3>Portals &amp;<br>channels</h3>
+                    </div>
+
+                    <div class="flow-portals fc7">
+                        <div class="flow-portal-row"><div class="flow-portal"><span>Member Portal</span></div></div>
+                        <div class="flow-portal-row"><div class="flow-portal"><span>Provider Portal</span></div></div>
+                        <div class="flow-portal-row"><div class="flow-portal"><span>Broker Portal</span></div></div>
+                        <div class="flow-portal-row"><div class="flow-portal flow-portal-more"><span>Other channels</span></div></div>
+                    </div>
+
+                </div>
+
+                <div class="life-foot">
+                    <div class="life-legend">
+                        <span class="legend-hands"><i></i>WHAT I WORKED ON</span>
+                        <span class="legend-ctx"><i></i>SURROUNDING SYSTEMS</span>
+                    </div>
+
+                    <div class="life-outcomes">
+                        <em>DATA MOVES</em>
+                        <span>SCHEDULED</span>
+                        <span>AD HOC</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
         <!-- TECHNOLOGY -->
-        <section class="section technology-section" id="technology">
+        <section class="tech-section" id="technology">
 
-            <div class="section-number">05</div>
+            <div class="tech-inner">
 
-            <div class="section-heading">
-                <span>TECHNOLOGY</span>
-                <h2>Deep legacy.<br>Modern direction.</h2>
+                <div class="tech-head">
+                    <div>
+                        <div class="about-eyebrow">TECHNOLOGY</div>
+
+                        <h2>
+                            Deep legacy.<br>
+                            <em>Modern direction.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        A mainframe core I know in depth, the integration layers
+                        that connect it to modern systems, and the cloud and
+                        delivery practices around it.
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+
+                    <article class="tech-card tech-core">
+                        <span class="tech-kicker">LEGACY CORE</span>
+                        <h3>Mainframe</h3>
+
+                            <div class="tech-group">
+                                <span class="tech-group-label">LANGUAGES &amp; SCRIPTING</span>
+                                <div class="tech-chips">
+                                    <span>COBOL</span>
+                                    <span>JCL</span>
+                                    <span>REXX</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-group">
+                                <span class="tech-group-label">DATA &amp; ONLINE</span>
+                                <div class="tech-chips">
+                                    <span>DB2</span>
+                                    <span>IMS DB</span>
+                                    <span>IMS DC / IMS TM</span>
+                                    <span>VSAM</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-group">
+                                <span class="tech-group-label">PLATFORM</span>
+                                <div class="tech-chips">
+                                    <span>z/OS</span>
+                                    <span>IBM UTILITIES</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-group">
+                                <span class="tech-group-label">SOURCE CONTROL</span>
+                                <div class="tech-chips">
+                                    <span>CHANGEMAN</span>
+                                    <span>CA ENDEVOR</span>
+                                </div>
+                            </div>
+                    </article>
+
+                    <article class="tech-card tech-bridge">
+                        <span class="tech-kicker">THE BRIDGE</span>
+                        <h3>Integration</h3>
+
+                            <div class="tech-chips">
+                                    <span>SOA</span>
+                                    <span>APIs</span>
+                                    <span>ETL</span>
+                                    <span>IBM INTEGRATION BUS</span>
+                                    <span>ENTERPRISE SERVICES</span>
+                            </div>
+                    </article>
+
+                    <article class="tech-card tech-modern">
+                        <span class="tech-kicker">MODERN</span>
+                        <h3>Cloud &amp; Tools</h3>
+
+                            <div class="tech-chips">
+                                    <span>AZURE</span>
+                                    <span>AZ-104</span>
+                                    <span>JSON</span>
+                                    <span>VISUAL STUDIO</span>
+                            </div>
+                    </article>
+
+                    <article class="tech-card tech-delivery">
+                        <span class="tech-kicker">WAY OF WORKING</span>
+                        <h3>Delivery</h3>
+
+                            <div class="tech-chips">
+                                    <span>AGILE</span>
+                                    <span>SCRUM</span>
+                                    <span>JIRA</span>
+                                    <span>CONFLUENCE</span>
+                                    <span>PI PLANNING</span>
+                                    <span>RELEASE MANAGEMENT</span>
+                            </div>
+                    </article>
+
+                </div>
+
+                <div class="tech-creds">
+                    <div class="tech-cred tech-cred-lime">
+                        <span>CERTIFICATION</span>
+                        <strong>Microsoft Azure Administrator Associate</strong>
+                    </div>
+
+                    <div class="tech-cred">
+                        <span>QUALIFICATION</span>
+                        <strong>Master of Computer Applications (MCA)</strong>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="technology-grid">
-
-                <div class="technology-column technology-mainframe">
-                    <span class="technology-label">01 · MAINFRAME</span>
-
-                    <h3>Mainframe</h3>
-
-                    <div class="technology-list">
-                        <span>COBOL</span>
-                        <span>JCL</span>
-                        <span>DB2</span>
-                        <span>IMS DB</span>
-                        <span>IMS DC / IMS TM</span>
-                        <span>VSAM</span>
-                        <span>z/OS</span>
-                        <span>CHANGEMAN</span>
-                        <span>CA ENDEVOR</span>
-                        <span>REXX</span>
-                        <span>IBM UTILITIES</span>
-                    </div>
-                </div>
-
-                <div class="technology-column">
-                    <span class="technology-label">02 · INTEGRATION</span>
-
-                    <h3>Integration</h3>
-
-                    <div class="technology-list">
-                        <span>SOA</span>
-                        <span>APIs</span>
-                        <span>ETL</span>
-                        <span>IBM INTEGRATION BUS</span>
-                        <span>ENTERPRISE SERVICES</span>
-                    </div>
-                </div>
-
-                <div class="technology-column">
-                    <span class="technology-label">03 · MODERN</span>
-
-                    <h3>Modern</h3>
-
-                    <div class="technology-list">
-                        <span>JAVA</span>
-                        <span>JSON</span>
-                        <span>VISUAL STUDIO</span>
-                        <span>AZURE</span>
-                        <span>AZ-104</span>
-                    </div>
-                </div>
-
-                <div class="technology-column">
-                    <span class="technology-label">04 · DELIVERY</span>
-
-                    <h3>Delivery</h3>
-
-                    <div class="technology-list">
-                        <span>AGILE</span>
-                        <span>SCRUM</span>
-                        <span>JIRA</span>
-                        <span>CONFLUENCE</span>
-                        <span>PI PLANNING</span>
-                        <span>RELEASE MANAGEMENT</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="certification-strip">
-                <div>
-                    <span>CERTIFICATION</span>
-                    <strong>Microsoft Azure Administrator Associate</strong>
-                </div>
-
-                <div>
-                    <span>QUALIFICATION</span>
-                    <strong>Master of Computer Applications (MCA)</strong>
-                </div>
-            </div>
-
         </section>
 
 

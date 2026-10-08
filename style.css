@@ -1910,10 +1910,16 @@ a {
     .about-intro p { font-size: 15px; line-height: 1.6; }
     .focus-item { padding: 12px 24px; }
     .focus-item p { font-size: 12.5px; line-height: 1.55; }
-    .experience-section { padding-top: 84px; padding-bottom: 36px; }
-    .experience-head { margin-bottom: 26px; }
-    .exp-client { margin-bottom: 30px; }
+}
+
+
+/* Short screens: keep the Experience page inside one screen */
+@media (min-width: 1051px) and (max-height: 920px) {
+    .experience-section { padding-top: 80px; padding-bottom: 32px; }
+    .experience-head { margin-bottom: 24px; }
+    .exp-client { margin-bottom: 28px; }
     .exp-step { padding-top: 26px; }
+    .exp-step h3 { margin: 14px 0 14px; }
     .exp-step li { font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
 }
 

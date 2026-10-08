@@ -3662,75 +3662,29 @@ a {
     z-index: 1;
 }
 
-/* About: a COBOL line with the requirement highlighted */
-.art-code {
-    background: var(--navy);
-    border-top: 3px solid var(--lime);
-    box-shadow: 0 14px 30px rgba(11,24,36,0.18);
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    color: #dbe6f3;
-}
-
-.art-code-bar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 9px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-}
-
-.art-code-bar i {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.25);
-}
-
-.art-code-bar span {
-    margin-left: auto;
+/* About: one requirement traced from business need to production */
+.art-trace {
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0 14px 26px rgba(11,24,36,0.14));
     font-family: "DM Sans", sans-serif;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 0.14em;
-    color: #8ea0b3;
 }
 
-.art-code pre {
-    margin: 0;
-    padding: 12px 0 14px;
-    font-family: inherit;
-    font-size: 11.5px;
-    line-height: 1.75;
-    white-space: pre;
-    overflow: hidden;
-}
-
-.art-code pre b {
-    font-weight: 400;
-}
-
-.art-code pre > b:not(.hl),
-.art-code pre {
-    padding-left: 0;
-}
-
-.art-code pre {
-    padding-left: 16px;
-}
-
-.art-code .c { color: #6f8aa6; }
-.art-code .k { color: var(--lime); }
-.art-code .s { color: #fff; }
-
-.art-code .hl {
-    display: block;
-    margin-bottom: 0;
-    margin-left: -16px;
-    padding-left: 13px;
-    background: rgba(142,193,255,0.2);
-    border-left: 3px solid var(--lime);
-    color: #fff;
-}
+.art-trace .tr-card { fill: #fff; stroke: #cfdaea; stroke-width: 1; }
+.art-trace .tr-top { fill: var(--lime); }
+.art-trace .tr-k { font-size: 9px; font-weight: 900; letter-spacing: 0.16em; fill: #5b6f86; }
+.art-trace .tr-pill { fill: var(--navy); }
+.art-trace .tr-pt { font-size: 8.5px; font-weight: 900; letter-spacing: 0.1em; fill: var(--lime); }
+.art-trace .tr-base { stroke: #cfdaea; stroke-width: 2; stroke-dasharray: 3 5; }
+.art-trace .tr-prog { stroke: var(--blue); stroke-width: 2.5; stroke-linecap: round; opacity: 0.55; }
+.art-trace .tr-node { fill: #fff; stroke: var(--blue); stroke-width: 2; }
+.art-trace .tr-tick { fill: none; stroke: var(--blue); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.art-trace .tr-glow { fill: rgba(142,193,255,0.45); }
+.art-trace .tr-end { fill: var(--navy); }
+.art-trace .tr-tick-end { fill: none; stroke: var(--lime); stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.art-trace .tr-l { font-size: 9px; font-weight: 900; letter-spacing: 0.12em; fill: var(--navy); }
+.art-trace .tr-lend { fill: var(--blue); }
+.art-trace .tr-s { font-size: 8.5px; font-weight: 600; fill: #7a8ca1; }
 
 /* Expertise: the layers I work across */
 .art-stack {

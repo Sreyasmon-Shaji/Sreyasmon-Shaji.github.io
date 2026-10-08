@@ -830,21 +830,24 @@ a {
 }
 
 
-/* NUMBERS (lime band: same colour as the page-1 strip, bridges light page 2 and dark page 3) */
+/* NUMBERS (slim lime band: same colour as the page-1 strip, bridges light page 2 and blue page 3) */
 
 .numbers-section {
     background-color: var(--lime);
     background-image: radial-gradient(rgba(11,24,36,0.11) 1.3px, transparent 1.6px);
     background-size: 24px 24px;
     color: var(--navy);
-    padding: 64px 5vw;
+    padding: 30px 5vw;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 30px;
+    gap: 24px;
 }
 
 .number-block {
-    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-right: 20px;
     border-right: 1px solid rgba(11,24,36,0.25);
 }
 
@@ -853,37 +856,37 @@ a {
 }
 
 .number-block strong {
-    display: block;
+    flex: none;
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(52px, 5.6vw, 84px);
-    line-height: 0.85;
-    letter-spacing: -0.08em;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1;
+    letter-spacing: -0.07em;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 18px;
 }
 
 .number-block span {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
-    letter-spacing: 0.14em;
-    color: rgba(11,24,36,0.72);
+    line-height: 1.4;
+    letter-spacing: 0.13em;
+    color: rgba(11,24,36,0.75);
 }
 
 
-/* EXPERTISE (dark page: same dot grid and orbit rings as page 1 and 2) */
+/* EXPERTISE (blue page: same dot grid, rings and lime accents as page 1 and 2, but its own colour) */
 
 .expertise-section {
     position: relative;
     overflow: hidden;
-    background-color: var(--navy);
+    background-color: #1b55d9;
     color: #fff;
     min-height: 100vh;
     min-height: 100svh;
     display: flex;
     align-items: center;
     padding: 96px 5vw 72px;
-    background-image: radial-gradient(rgba(255,255,255,0.14) 1.3px, transparent 1.6px);
+    background-image: radial-gradient(rgba(255,255,255,0.2) 1.3px, transparent 1.6px);
     background-size: 24px 24px;
 }
 
@@ -900,8 +903,8 @@ a {
     height: 700px;
     right: -240px;
     top: -330px;
-    border: 1.5px solid rgba(107,164,255,0.55);
-    box-shadow: 0 0 40px rgba(36,119,255,0.2);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    box-shadow: 0 0 40px rgba(255,255,255,0.08);
 }
 
 .expertise-section::after {
@@ -909,7 +912,7 @@ a {
     height: 440px;
     right: -110px;
     top: -210px;
-    border: 1px dashed rgba(215,255,69,0.5);
+    border: 1px dashed rgba(215,255,69,0.7);
 }
 
 .expertise-inner {
@@ -935,7 +938,7 @@ a {
 
 .expertise-head h2 em {
     font-style: normal;
-    color: var(--blue-light);
+    color: var(--lime);
 }
 
 .expertise-grid {
@@ -948,15 +951,15 @@ a {
     display: flex;
     flex-direction: column;
     padding: 30px 28px 28px;
-    background: rgba(255,255,255,0.045);
-    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(7,17,26,0.32);
+    border: 1px solid rgba(255,255,255,0.22);
     border-top: 4px solid var(--lime);
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .expertise-card:hover {
     transform: translateY(-4px);
-    background: rgba(255,255,255,0.08);
+    background: rgba(7,17,26,0.42);
 }
 
 .expertise-primary {
@@ -975,7 +978,7 @@ a {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.04em;
-    color: var(--blue-light);
+    color: var(--lime);
 }
 
 .expertise-primary .card-number {
@@ -993,7 +996,7 @@ a {
 .expertise-card p {
     font-size: 13px;
     line-height: 1.65;
-    color: rgba(255,255,255,0.72);
+    color: rgba(255,255,255,0.88);
 }
 
 .expertise-primary p {
@@ -1009,12 +1012,12 @@ a {
 }
 
 .card-tags span {
-    border: 1px solid rgba(255,255,255,0.28);
+    border: 1px solid rgba(255,255,255,0.4);
     padding: 7px 9px;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.88);
+    color: #fff;
 }
 
 .expertise-primary .card-tags span {
@@ -2046,14 +2049,15 @@ a {
 
     .numbers-section {
         grid-template-columns: 1fr 1fr;
-        padding: 65px 22px;
-        gap: 40px 20px;
+        padding: 34px 22px;
+        gap: 22px 16px;
     }
 
     .number-block {
         border-right: 0;
         border-bottom: 1px solid rgba(11,24,36,0.25);
-        padding-bottom: 30px;
+        padding-right: 0;
+        padding-bottom: 18px;
     }
 
     .number-block:last-child {
@@ -2061,7 +2065,7 @@ a {
     }
 
     .number-block strong {
-        font-size: 55px;
+        font-size: 38px;
     }
 
     .expertise-section {

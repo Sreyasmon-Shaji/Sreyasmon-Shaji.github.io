@@ -100,7 +100,7 @@ a {
     min-height: 480px;
     background: var(--navy);
     color: #fff;
-    padding: 82px 5vw 24px;
+    padding: 76px 5vw 20px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -160,7 +160,7 @@ a {
 
 .hero-location {
     margin-top: 32px;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.22em;
     font-weight: 800;
     color: rgba(255,255,255,0.5);
@@ -175,7 +175,7 @@ a {
     border: 1px solid rgba(215,255,69,0.3);
     border-radius: 999px;
     background: rgba(215,255,69,0.06);
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.15em;
     color: var(--lime);
@@ -201,7 +201,8 @@ a {
 
 .hero-orbit {
     position: relative;
-    width: min(440px, 37vw);
+    width: min(440px, 37vw, max(400px, calc(100vh - 340px)));
+    width: min(440px, 37vw, max(400px, calc(100svh - 340px)));
     flex: 0 0 auto;
     aspect-ratio: 1;
     margin: 0;
@@ -232,8 +233,8 @@ a {
 
 .orbit-core {
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 36%;
+    aspect-ratio: 1;
     border-radius: 50%;
     background: var(--lime);
     color: var(--dark);
@@ -255,7 +256,7 @@ a {
 }
 
 .orbit-core span {
-    font-size: 7.5px;
+    font-size: 9px;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 0.12em;
@@ -267,9 +268,9 @@ a {
     border: 1px solid rgba(107,164,255,0.8);
     background: #0f2236;
     box-shadow: 0 0 14px rgba(36,119,255,0.28);
-    font-size: 7.6px;
+    font-size: 8.8px;
     font-weight: 800;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
     color: #fff;
     white-space: nowrap;
 }
@@ -301,7 +302,7 @@ a {
 
 .label-three {
     top: 42%;
-    right: -9%;
+    right: -15%;
 }
 
 .label-four {
@@ -337,14 +338,14 @@ a {
     z-index: 3;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 76px;
     min-width: 0;
 }
 
 .hero-facts {
     flex: 1 1 0;
     min-width: 0;
-    max-width: 210px;
+    max-width: 230px;
     margin-left: auto;
     padding-left: 24px;
     border-left: 1px solid rgba(255,255,255,0.16);
@@ -356,16 +357,16 @@ a {
 .fact span {
     display: block;
     margin-bottom: 7px;
-    font-size: 7px;
+    font-size: 8.5px;
     font-weight: 900;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.42);
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.55);
 }
 
 .fact strong {
     display: block;
     font-family: "Space Grotesk", sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: -0.01em;
@@ -432,16 +433,59 @@ a {
 
 .hero-link {
     display: flex;
-    gap: 18px;
+    gap: 14px;
     align-items: center;
-    font-size: 8px;
+    padding: 13px 20px;
+    border: 1px solid var(--lime);
+    background: rgba(215,255,69,0.08);
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.16em;
     color: var(--lime);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero-link:hover {
+    background: var(--lime);
+    color: var(--navy);
 }
 
 .hero-link span {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.cta-btn {
+    padding: 12px 20px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-primary {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--navy);
+}
+
+.cta-primary:hover {
+    background: #fff;
+    border-color: #fff;
+}
+
+.cta-secondary:hover {
+    border-color: var(--lime);
+    color: var(--lime);
 }
 
 
@@ -452,7 +496,7 @@ a {
     min-height: 110px;
     background: var(--lime);
     display: grid;
-    grid-template-columns: 0.55fr 1px 2.4fr 1px 1.2fr;
+    grid-template-columns: 0.45fr 1px 3.2fr 1px 1.15fr;
     align-items: center;
     padding: 12px 5vw;
     gap: 30px;
@@ -482,8 +526,8 @@ a {
 
 .career-timeline {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
     min-width: 0;
 }
 
@@ -1463,6 +1507,32 @@ a {
 }
 
 
+/* Slightly tighter career timeline on mid-size laptops */
+@media (max-width: 1360px) {
+    .career-timeline {
+        gap: 14px;
+    }
+
+    .career-company {
+        font-size: 16px;
+    }
+
+    .career-place {
+        font-size: 9px;
+    }
+
+    .career-role {
+        font-size: 7px;
+        letter-spacing: 0.06em;
+    }
+
+    .career-years {
+        font-size: 9px;
+        letter-spacing: 0.08em;
+    }
+}
+
+
 /* Hide the at-a-glance column once there is no longer clean room
    for it beside the orbit. */
 @media (max-width: 1180px) {
@@ -1471,16 +1541,65 @@ a {
     }
 
     .label-three {
-        right: -14%;
+        right: -20%;
     }
 
     .orbit-core {
-        width: 140px;
-        height: 140px;
+        width: 33%;
     }
 
     .orbit-core strong {
         font-size: 44px;
+    }
+}
+
+
+/* Short laptop screens (browser toolbars use up height): keep the whole
+   first screen visible by tightening vertical space a little. */
+@media (min-width: 1051px) and (max-height: 760px) {
+    .hero {
+        padding-top: 66px;
+        padding-bottom: 14px;
+    }
+
+    .hero-orbit {
+        width: min(440px, 37vw, max(370px, calc(100vh - 330px)));
+        width: min(440px, 37vw, max(370px, calc(100svh - 330px)));
+    }
+
+    .orbit-label {
+        font-size: 7.8px;
+        padding: 7px 9px;
+    }
+
+    .orbit-core {
+        width: 34%;
+    }
+
+    .orbit-core strong {
+        font-size: 40px;
+    }
+
+    .eyebrow {
+        margin-bottom: 22px;
+    }
+
+    .hero-location {
+        margin-top: 22px;
+    }
+
+    .hero-bottom {
+        margin-top: 8px;
+    }
+
+    .hero-photo {
+        width: 92px;
+        height: 92px;
+    }
+
+    .positioning-strip {
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
 }
 

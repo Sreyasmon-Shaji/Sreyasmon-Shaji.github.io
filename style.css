@@ -3642,3 +3642,307 @@ a {
         left: 6%;
     }
 }
+
+
+/* HEADER GRAPHICS (fill the empty space beside the page titles; hidden on narrow screens) */
+
+.about-head,
+.expertise-head,
+.experience-head,
+.projects-head {
+    position: relative;
+}
+
+.head-art {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(340px, 32vw, 460px);
+    z-index: 1;
+}
+
+/* About: a COBOL line with the requirement highlighted */
+.art-code {
+    background: var(--navy);
+    border-top: 3px solid var(--lime);
+    box-shadow: 0 14px 30px rgba(11,24,36,0.18);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color: #dbe6f3;
+}
+
+.art-code-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.art-code-bar i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+}
+
+.art-code-bar span {
+    margin-left: auto;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    color: #8ea0b3;
+}
+
+.art-code pre {
+    margin: 0;
+    padding: 12px 0 14px;
+    font-family: inherit;
+    font-size: 11.5px;
+    line-height: 1.75;
+    white-space: pre;
+    overflow: hidden;
+}
+
+.art-code pre b {
+    font-weight: 400;
+}
+
+.art-code pre > b:not(.hl),
+.art-code pre {
+    padding-left: 0;
+}
+
+.art-code pre {
+    padding-left: 16px;
+}
+
+.art-code .c { color: #6f8aa6; }
+.art-code .k { color: var(--lime); }
+.art-code .s { color: #fff; }
+
+.art-code .hl {
+    display: block;
+    margin-bottom: 0;
+    margin-left: -16px;
+    padding-left: 13px;
+    background: rgba(142,193,255,0.2);
+    border-left: 3px solid var(--lime);
+    color: #fff;
+}
+
+/* Expertise: the layers I work across */
+.art-stack {
+    height: auto;
+}
+
+.art-stack .st-line {
+    stroke: rgba(255,255,255,0.7);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 4;
+    fill: none;
+}
+
+.art-stack .st-fill {
+    fill: #fff;
+}
+
+.art-stack .st-bars rect {
+    fill: rgba(255,255,255,0.1);
+    stroke: rgba(255,255,255,0.45);
+    stroke-width: 1;
+}
+
+.art-stack .st-text text {
+    fill: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+.art-stack .st-dots circle {
+    fill: var(--lime);
+}
+
+/* Experience: Kochi, Bengaluru, Stockholm */
+.art-route {
+    height: auto;
+}
+
+.art-route .rt-arc {
+    fill: none;
+    stroke: var(--lime);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 5;
+}
+
+.art-route .rt-node {
+    fill: #0c2459;
+    stroke: var(--lime);
+    stroke-width: 2;
+}
+
+.art-route .rt-end {
+    fill: var(--lime);
+}
+
+.art-route .rt-text text,
+.art-route .rt-years text {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+.art-route .rt-text text {
+    fill: #fff;
+    font-size: 9px;
+}
+
+.art-route .rt-years text {
+    fill: rgba(255,255,255,0.6);
+    font-size: 8px;
+}
+
+/* Projects: index of the five projects */
+.art-index {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    background: rgba(255,255,255,0.75);
+    border-left: 3px solid var(--lime);
+    border-top: 1px solid rgba(11,24,36,0.1);
+    border-right: 1px solid rgba(11,24,36,0.1);
+    border-bottom: 1px solid rgba(11,24,36,0.1);
+}
+
+.art-index li {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    border-bottom: 1px solid rgba(11,24,36,0.1);
+}
+
+.art-index li:last-child {
+    border-bottom: 0;
+}
+
+.art-index b {
+    font-size: 11px;
+    font-weight: 900;
+    color: #2477ff;
+}
+
+.art-index span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+}
+
+.art-index i {
+    font-style: normal;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: #5b6872;
+}
+
+/* Technology: legacy to modern bridge inside the Integration card */
+.bridge-art {
+    margin-top: auto;
+    align-self: flex-start;
+    height: 66px;
+    width: auto;
+    padding-top: 6px;
+}
+
+.bridge-art .br-box rect {
+    fill: rgba(255,255,255,0.06);
+    stroke: var(--lime);
+    stroke-width: 1.5;
+}
+
+.bridge-art .br-box path {
+    fill: none;
+    stroke: rgba(255,255,255,0.55);
+    stroke-width: 1;
+}
+
+.bridge-art .br-box circle {
+    fill: var(--lime);
+}
+
+.bridge-art .br-arch {
+    fill: none;
+    stroke: var(--lime);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 4;
+}
+
+.bridge-art .br-deck {
+    stroke: rgba(255,255,255,0.5);
+    stroke-width: 1;
+    fill: none;
+}
+
+.bridge-art .br-cloud {
+    fill: rgba(142,193,255,0.14);
+    stroke: var(--lime);
+    stroke-width: 1.5;
+}
+
+.bridge-art .br-text text {
+    fill: rgba(255,255,255,0.7);
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+/* Contact: stars and the coordinates of Stockholm */
+.contact-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-coords {
+    position: absolute;
+    left: 5vw;
+    bottom: clamp(95px, 11vw, 170px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.7);
+}
+
+.contact-coords i {
+    width: 28px;
+    height: 1px;
+    background: var(--lime);
+}
+
+@media (max-width: 1179px) {
+    .head-art {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .contact-coords {
+        display: none;
+    }
+}

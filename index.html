@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261043">
+    <link rel="stylesheet" href="style.css?v=20261044">
 </head>
 
 <body>
@@ -215,13 +215,16 @@
                         to <em>production system.</em>
                     </h2>
 
-                    <div class="head-art art-code" aria-hidden="true">
-                        <div class="art-code-bar"><i></i><i></i><i></i><span>BENEFIT-LOOKUP.cbl</span></div>
-<pre><b class="c">* REQUIREMENT 4.2  -  CHECK BENEFIT COVERAGE</b>
-<b class="k">IF</b> CLAIM-STATUS = <b class="s">'PENDED'</b>
-<b class="hl">   <b class="k">PERFORM</b> CHECK-BENEFIT-RULES        </b><b class="k">PERFORM</b> APPLY-CONTRACT-LIMITS
-<b class="k">END-IF</b>.</pre>
-                    </div>
+                    <svg class="head-art art-trace" viewBox="0 0 460 148" aria-hidden="true">
+                        <rect class="tr-card" x="1" y="1" width="458" height="146" rx="4"/>
+                        <rect class="tr-top" x="1" y="1" width="458" height="3"/>
+                        <text class="tr-k" x="22" y="30">REQUIREMENT TRACE</text>
+                        <rect class="tr-pill" x="372" y="17" width="66" height="19" rx="9.5"/>
+                        <text class="tr-pt" x="405" y="30" text-anchor="middle">REQ 4.2</text>
+                        <line class="tr-base" x1="50" y1="76" x2="410" y2="76"/>
+                        <line class="tr-prog" x1="50" y1="76" x2="410" y2="76"/>
+                        <circle class="tr-node" cx="50" cy="76" r="13"/><path class="tr-tick" d="M45 76 l3.8 3.8 l6.6 -7.6"/><text class="tr-l" x="50" y="117" text-anchor="middle">NEED</text><text class="tr-s" x="50" y="130" text-anchor="middle">business</text><circle class="tr-node" cx="140" cy="76" r="13"/><path class="tr-tick" d="M135 76 l3.8 3.8 l6.6 -7.6"/><text class="tr-l" x="140" y="117" text-anchor="middle">SPECIFY</text><text class="tr-s" x="140" y="130" text-anchor="middle">analysis</text><circle class="tr-node" cx="230" cy="76" r="13"/><path class="tr-tick" d="M225 76 l3.8 3.8 l6.6 -7.6"/><text class="tr-l" x="230" y="117" text-anchor="middle">BUILD</text><text class="tr-s" x="230" y="130" text-anchor="middle">COBOL · DB2</text><circle class="tr-node" cx="320" cy="76" r="13"/><path class="tr-tick" d="M315 76 l3.8 3.8 l6.6 -7.6"/><text class="tr-l" x="320" y="117" text-anchor="middle">TEST</text><text class="tr-s" x="320" y="130" text-anchor="middle">UAT</text><circle class="tr-glow" cx="410" cy="76" r="26"/><circle class="tr-end" cx="410" cy="76" r="16"/><path class="tr-tick-end" d="M404 76 l4.5 4.5 l8 -9"/><text class="tr-l tr-lend" x="410" y="117" text-anchor="middle">LIVE</text><text class="tr-s" x="410" y="130" text-anchor="middle">production</text>
+                    </svg>
                 </div>
 
                 <div class="about-grid">

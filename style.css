@@ -127,7 +127,7 @@ a {
     width: 100%;
     min-height: 300px;
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 30px;
 }
@@ -202,8 +202,9 @@ a {
 .hero-orbit {
     position: relative;
     width: min(440px, 37vw);
+    flex: 0 0 auto;
     aspect-ratio: 1;
-    margin: 0 auto 0 0;
+    margin: 0;
     min-width: 0;
 }
 
@@ -317,76 +318,46 @@ a {
     left: 2%;
 }
 
-.hero-terminal {
-    position: absolute;
-    right: 3.2vw;
-    top: 50%;
-    transform: translateY(-50%);
-    width: min(150px, 13vw);
-    border: 1px solid rgba(255,255,255,0.16);
-    background: rgba(255,255,255,0.035);
-    border-radius: 6px;
-    overflow: hidden;
-    z-index: 1;
-    pointer-events: none;
-}
+/* Profile-at-a-glance column, sits beside the orbit */
 
-.terminal-head {
+.hero-visual {
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 7px 9px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    background: rgba(255,255,255,0.02);
+    gap: 40px;
+    min-width: 0;
 }
 
-.terminal-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.25);
+.hero-facts {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 210px;
+    margin-left: auto;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255,255,255,0.16);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
-.terminal-title {
-    margin-left: 2px;
-    font-size: 5.5px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.4);
-    white-space: nowrap;
+.fact span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.42);
 }
 
-.terminal-body {
-    padding: 9px 10px 10px;
-}
-
-.terminal-body p {
-    font-family: "Courier New", monospace;
-    font-size: 8px;
-    line-height: 1.9;
-    color: rgba(215,255,69,0.75);
-    white-space: nowrap;
-}
-
-.terminal-prompt {
-    color: rgba(255,255,255,0.35);
-    margin-right: 6px;
-}
-
-.terminal-cursor {
-    display: inline-block;
-    width: 6px;
-    height: 10px;
-    background: var(--lime);
-    margin-left: 4px;
-    vertical-align: middle;
-    animation: cursorBlink 1s steps(1) infinite;
-}
-
-@keyframes cursorBlink {
-    50% {
-        opacity: 0;
-    }
+.fact strong {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #fff;
 }
 
 .hero-bottom {
@@ -1434,10 +1405,10 @@ a {
 }
 
 
-/* Hide the terminal card once the orbit column gets too narrow for it
-   to sit beside the orbit without overlapping. */
-@media (max-width: 1360px) {
-    .hero-terminal {
+/* Hide the at-a-glance column once there is no longer clean room
+   for it beside the orbit. */
+@media (max-width: 1180px) {
+    .hero-facts {
         display: none;
     }
 }
@@ -1464,6 +1435,10 @@ a {
     .hero-grid {
         grid-template-columns: 1fr;
         padding-top: 40px;
+    }
+
+    .hero-visual {
+        display: block;
     }
 
     .hero-orbit {

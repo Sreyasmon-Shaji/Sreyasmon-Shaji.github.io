@@ -1239,7 +1239,7 @@ a {
     overflow: hidden;
     background-color: #eef3e4;
     color: var(--dark);
-    padding: 110px 5vw 110px;
+    padding: 56px 5vw 100px;
     background-image: radial-gradient(rgba(11,24,36,0.13) 1.3px, transparent 1.6px);
     background-size: 24px 24px;
 }
@@ -1277,7 +1277,7 @@ a {
 }
 
 .projects-head {
-    margin-bottom: 48px;
+    margin-bottom: 36px;
 }
 
 .projects-head h2 {
@@ -2097,7 +2097,7 @@ a {
     }
 
     .projects-section {
-        padding: 100px 5vw;
+        padding: 56px 5vw 90px;
     }
 
     .projects-grid {
@@ -2383,7 +2383,7 @@ a {
     }
 
     .projects-section {
-        padding: 80px 22px;
+        padding: 48px 22px 70px;
     }
 
     .projects-section::before {

@@ -2489,76 +2489,183 @@ a {
 }
 
 
-/* CONTACT */
+/* CONTACT (lime closing page: same lime as the strip on page 1, with the shared dots and rings) */
 
 .contact-section {
-    min-height: 720px;
-    padding: 140px 5vw;
-    background: var(--lime);
     position: relative;
+    overflow: hidden;
+    background-color: var(--lime);
+    color: var(--navy);
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 72px 5vw 64px;
+    background-image: radial-gradient(rgba(11,24,36,0.14) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
+}
+
+.contact-section::before,
+.contact-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.contact-section::before {
+    width: 400px;
+    height: 400px;
+    right: -160px;
+    top: -290px;
+    border: 1.5px solid rgba(11,24,36,0.45);
+}
+
+.contact-section::after {
+    width: 250px;
+    height: 250px;
+    right: -85px;
+    top: -215px;
+    border: 1px dashed rgba(11,24,36,0.4);
+}
+
+.contact-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 80px;
     align-items: center;
 }
 
-.contact-number {
-    position: absolute;
-    top: 55px;
-    left: 5vw;
-    font-size: 8px;
+.contact-eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 7px 12px;
+    background: var(--navy);
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.16em;
-}
-
-.contact-copy > span {
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 0.18em;
+    color: var(--lime);
 }
 
 .contact-copy h2 {
-    margin-top: 25px;
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(60px, 7vw, 110px);
-    line-height: 0.83;
-    letter-spacing: -0.08em;
+    font-size: clamp(48px, 6.4vw, 104px);
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.contact-copy h2 em {
+    font-style: normal;
+    color: #1b55d9;
 }
 
 .contact-copy p {
-    max-width: 560px;
-    margin-top: 40px;
-    font-size: 13px;
-    line-height: 1.65;
-    color: rgba(16,24,32,0.7);
+    margin-top: 34px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(11,24,36,0.78);
 }
 
-.contact-links {
-    border-top: 1px solid rgba(16,24,32,0.25);
+.contact-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    max-width: 640px;
+}
+
+.contact-roles span {
+    border: 1px solid rgba(11,24,36,0.45);
+    padding: 8px 10px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+}
+
+.contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .contact-link {
     display: grid;
-    grid-template-columns: 100px 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 20px;
     align-items: center;
-    gap: 25px;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(16,24,32,0.25);
+    padding: 26px 28px;
+    background-color: var(--navy);
+    background-image: radial-gradient(rgba(255,255,255,0.07) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
+    border-top: 4px solid var(--navy);
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(11,24,36,0.28);
 }
 
 .contact-link span {
-    font-size: 8px;
+    grid-column: 1;
+    margin-bottom: 10px;
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
+    color: var(--lime);
 }
 
 .contact-link strong {
-    font-size: 15px;
+    grid-column: 1;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(18px, 1.7vw, 26px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    word-break: break-word;
 }
 
 .contact-link em {
-    font-size: 22px;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--lime);
+    font-size: 20px;
     font-style: normal;
+    color: var(--navy);
+}
+
+.contact-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    color: var(--navy);
+}
+
+.contact-status .status-dot {
+    background: var(--navy);
+    animation-name: statusPulseDark;
+}
+
+@keyframes statusPulseDark {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(11,24,36,0.45); }
+    50% { box-shadow: 0 0 0 6px rgba(11,24,36,0); }
 }
 
 
@@ -2955,7 +3062,18 @@ a {
     }
 
     .contact-section {
-        gap: 50px;
+        display: block;
+        min-height: 0;
+        padding: 56px 5vw 90px;
+    }
+
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .contact-side {
+        max-width: 560px;
     }
 }
 
@@ -3324,27 +3442,26 @@ a {
     }
 
     .contact-section {
-        display: block;
-        min-height: auto;
-        padding: 100px 22px 70px;
+        padding: 48px 22px 70px;
+    }
+
+    .contact-section::before {
+        width: 480px;
+        height: 480px;
+        right: -240px;
+        top: -80px;
+    }
+
+    .contact-section::after {
+        display: none;
     }
 
     .contact-copy h2 {
-        font-size: clamp(55px, 16vw, 85px);
-    }
-
-    .contact-links {
-        margin-top: 60px;
+        font-size: clamp(44px, 13.5vw, 70px);
     }
 
     .contact-link {
-        grid-template-columns: 80px 1fr auto;
-        gap: 15px;
-    }
-
-    .contact-link strong {
-        font-size: 12px;
-        word-break: break-word;
+        padding: 22px 20px;
     }
 
     .site-footer {
@@ -3414,13 +3531,5 @@ a {
 
     .label-eight {
         left: 6%;
-    }
-
-    .contact-link {
-        grid-template-columns: 1fr auto;
-    }
-
-    .contact-link span {
-        grid-column: 1 / -1;
     }
 }

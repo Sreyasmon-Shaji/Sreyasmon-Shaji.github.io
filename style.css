@@ -2543,20 +2543,22 @@ a {
 }
 
 
-/* CONTACT (lime closing page: same lime as the strip on page 1, with the shared dots and rings) */
+/* CONTACT (dusk-blue closing page: Stockholm skyline that melts into the footer; same dots, rings and lime accents) */
 
 .contact-section {
     position: relative;
     overflow: hidden;
-    background-color: var(--lime);
-    color: var(--navy);
+    background-color: #12306b;
+    background-image:
+        radial-gradient(rgba(255,255,255,0.12) 1.3px, transparent 1.6px),
+        linear-gradient(180deg, #0c1f4a 0%, #1a4290 100%);
+    background-size: 24px 24px, 100% 100%;
+    color: #fff;
     min-height: 100vh;
     min-height: 100svh;
     display: flex;
     align-items: center;
-    padding: 72px 5vw 64px;
-    background-image: radial-gradient(rgba(11,24,36,0.14) 1.3px, transparent 1.6px);
-    background-size: 24px 24px;
+    padding: 64px 5vw clamp(150px, 17vw, 250px);
 }
 
 .contact-section::before,
@@ -2572,7 +2574,7 @@ a {
     height: 400px;
     right: -160px;
     top: -290px;
-    border: 1.5px solid rgba(11,24,36,0.45);
+    border: 1.5px solid rgba(255,255,255,0.35);
 }
 
 .contact-section::after {
@@ -2580,7 +2582,17 @@ a {
     height: 250px;
     right: -85px;
     top: -215px;
-    border: 1px dashed rgba(11,24,36,0.4);
+    border: 1px dashed rgba(215,255,69,0.55);
+}
+
+.contact-skyline {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: clamp(120px, 16vw, 240px);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .contact-inner {
@@ -2599,32 +2611,32 @@ a {
     display: inline-block;
     margin-bottom: 22px;
     padding: 7px 12px;
-    background: var(--navy);
+    background: var(--lime);
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.16em;
-    color: var(--lime);
+    color: var(--navy);
 }
 
 .contact-copy h2 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(48px, 6.4vw, 104px);
+    font-size: clamp(48px, 6.2vw, 100px);
     line-height: 0.88;
     letter-spacing: -0.075em;
     font-weight: 600;
-    color: var(--navy);
+    color: #fff;
 }
 
 .contact-copy h2 em {
     font-style: normal;
-    color: #1b55d9;
+    color: var(--lime);
 }
 
 .contact-copy p {
-    margin-top: 34px;
+    margin-top: 30px;
     font-size: 15px;
     line-height: 1.6;
-    color: rgba(11,24,36,0.78);
+    color: rgba(255,255,255,0.8);
 }
 
 .contact-roles {
@@ -2636,12 +2648,12 @@ a {
 }
 
 .contact-roles span {
-    border: 1px solid rgba(11,24,36,0.45);
+    border: 1px solid rgba(255,255,255,0.5);
     padding: 8px 10px;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.1em;
-    color: var(--navy);
+    color: #fff;
 }
 
 .contact-side {
@@ -2655,18 +2667,17 @@ a {
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 20px;
     align-items: center;
-    padding: 26px 28px;
-    background-color: var(--navy);
-    background-image: radial-gradient(rgba(255,255,255,0.07) 1.3px, transparent 1.6px);
-    background-size: 24px 24px;
-    border-top: 4px solid var(--navy);
+    padding: 24px 28px;
+    background-color: rgba(7,15,22,0.55);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-top: 4px solid var(--lime);
     color: #fff;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-link:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(11,24,36,0.28);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
 }
 
 .contact-link span {
@@ -2709,17 +2720,7 @@ a {
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.14em;
-    color: var(--navy);
-}
-
-.contact-status .status-dot {
-    background: var(--navy);
-    animation-name: statusPulseDark;
-}
-
-@keyframes statusPulseDark {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(11,24,36,0.45); }
-    50% { box-shadow: 0 0 0 6px rgba(11,24,36,0); }
+    color: #fff;
 }
 
 
@@ -3119,7 +3120,7 @@ a {
     .contact-section {
         display: block;
         min-height: 0;
-        padding: 56px 5vw 90px;
+        padding: 56px 5vw 190px;
     }
 
     .contact-inner {
@@ -3502,7 +3503,11 @@ a {
     }
 
     .contact-section {
-        padding: 48px 22px 70px;
+        padding: 48px 22px 140px;
+    }
+
+    .contact-skyline {
+        height: 110px;
     }
 
     .contact-section::before {

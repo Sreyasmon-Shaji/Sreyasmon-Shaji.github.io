@@ -72,7 +72,7 @@ a {
 }
 
 .main-nav a {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.15em;
     color: rgba(255,255,255,0.7);
@@ -220,13 +220,14 @@ a {
 .orbit-ring-one {
     width: 64%;
     height: 64%;
-    border-color: rgba(255,255,255,0.22);
+    border: 1px dashed rgba(215,255,69,0.55);
 }
 
 .orbit-ring-two {
     width: 90%;
     height: 90%;
-    border-color: rgba(36,119,255,0.45);
+    border: 1.5px solid rgba(107,164,255,0.85);
+    box-shadow: 0 0 26px rgba(36,119,255,0.35), inset 0 0 26px rgba(36,119,255,0.18);
 }
 
 .orbit-core {
@@ -263,9 +264,9 @@ a {
 .orbit-label {
     position: absolute;
     padding: 8px 11px;
-    border: 1px solid rgba(255,255,255,0.4);
-    background: rgba(11,24,36,0.96);
-    backdrop-filter: blur(5px);
+    border: 1px solid rgba(107,164,255,0.8);
+    background: #0f2236;
+    box-shadow: 0 0 14px rgba(36,119,255,0.28);
     font-size: 7.6px;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -273,9 +274,20 @@ a {
     white-space: nowrap;
 }
 
-/* All orbit labels are kept INSIDE the orbit's own box (0%–100%)
-   so they can never be pushed past the edge of the viewport on
-   narrower desktop widths. */
+.orbit-label::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--lime);
+    vertical-align: 1px;
+}
+
+/* Orbit labels are positioned around the orbit. The "stakeholder
+   management" label sits slightly outside the right edge so it
+   never touches the 12+ circle. */
 
 .label-one {
     top: 5%;
@@ -289,7 +301,7 @@ a {
 
 .label-three {
     top: 42%;
-    right: 2%;
+    right: -9%;
 }
 
 .label-four {
@@ -1411,6 +1423,19 @@ a {
     .hero-facts {
         display: none;
     }
+
+    .label-three {
+        right: -14%;
+    }
+
+    .orbit-core {
+        width: 140px;
+        height: 140px;
+    }
+
+    .orbit-core strong {
+        font-size: 44px;
+    }
 }
 
 
@@ -1548,6 +1573,14 @@ a {
     .orbit-label {
         font-size: 5.5px;
         padding: 5px 6px;
+    }
+
+    .orbit-label::before {
+        display: none;
+    }
+
+    .label-three {
+        right: -3%;
     }
 
     .label-seven {
@@ -1852,7 +1885,7 @@ a {
     }
 
     .label-three {
-        right: 4%;
+        right: -3%;
     }
 
     .label-four {

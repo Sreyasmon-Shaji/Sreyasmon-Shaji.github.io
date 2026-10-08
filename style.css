@@ -830,20 +830,22 @@ a {
 }
 
 
-/* NUMBERS */
+/* NUMBERS (lime band: same colour as the page-1 strip, bridges light page 2 and dark page 3) */
 
 .numbers-section {
-    background: var(--navy);
-    color: #fff;
-    padding: 90px 5vw;
+    background-color: var(--lime);
+    background-image: radial-gradient(rgba(11,24,36,0.11) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
+    color: var(--navy);
+    padding: 64px 5vw;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 30px;
 }
 
 .number-block {
     padding-right: 25px;
-    border-right: 1px solid rgba(255,255,255,0.12);
+    border-right: 1px solid rgba(11,24,36,0.25);
 }
 
 .number-block:last-child {
@@ -853,113 +855,171 @@ a {
 .number-block strong {
     display: block;
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(55px, 6vw, 90px);
+    font-size: clamp(52px, 5.6vw, 84px);
     line-height: 0.85;
     letter-spacing: -0.08em;
-    color: var(--lime);
-    margin-bottom: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 18px;
 }
 
 .number-block span {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.14em;
-    color: rgba(255,255,255,0.55);
+    color: rgba(11,24,36,0.72);
 }
 
 
-/* EXPERTISE */
+/* EXPERTISE (dark page: same dot grid and orbit rings as page 1 and 2) */
 
 .expertise-section {
-    background: #eef1f2;
-    max-width: none;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--navy);
+    color: #fff;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 96px 5vw 72px;
+    background-image: radial-gradient(rgba(255,255,255,0.14) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
 }
 
-.expertise-section .section-number,
-.expertise-section .section-heading,
-.expertise-grid {
+.expertise-section::before,
+.expertise-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.expertise-section::before {
+    width: 700px;
+    height: 700px;
+    right: -240px;
+    top: -330px;
+    border: 1.5px solid rgba(107,164,255,0.55);
+    box-shadow: 0 0 40px rgba(36,119,255,0.2);
+}
+
+.expertise-section::after {
+    width: 440px;
+    height: 440px;
+    right: -110px;
+    top: -210px;
+    border: 1px dashed rgba(215,255,69,0.5);
+}
+
+.expertise-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
     max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+
+.expertise-head {
+    margin-bottom: 44px;
+}
+
+.expertise-head h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(40px, 4.4vw, 72px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.expertise-head h2 em {
+    font-style: normal;
+    color: var(--blue-light);
 }
 
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .expertise-card {
-    min-height: 460px;
-    padding: 48px;
-    background: #fff;
-    border: 1px solid #dce1e4;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 28px 28px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-top: 4px solid var(--lime);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.08);
 }
 
 .expertise-primary {
-    background: var(--blue);
-    color: #fff;
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--navy);
 }
 
-.expertise-dark {
-    background: var(--navy);
-    color: #fff;
+.expertise-primary:hover {
+    background: #e3ff74;
 }
 
 .card-number {
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 0.15em;
-    color: #89949b;
-    margin-bottom: 100px;
+    margin-bottom: 36px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--blue-light);
 }
 
-.expertise-primary .card-number,
-.expertise-dark .card-number {
-    color: rgba(255,255,255,0.5);
+.expertise-primary .card-number {
+    color: var(--navy);
 }
 
 .expertise-card h3 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(38px, 4vw, 65px);
-    line-height: 0.9;
+    font-size: clamp(30px, 2.9vw, 44px);
+    line-height: 0.92;
     letter-spacing: -0.065em;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
 .expertise-card p {
-    max-width: 550px;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.65;
-    color: #67737b;
+    color: rgba(255,255,255,0.72);
 }
 
-.expertise-primary p,
-.expertise-dark p {
-    color: rgba(255,255,255,0.68);
+.expertise-primary p {
+    color: rgba(11,24,36,0.82);
 }
 
 .card-tags {
-    position: absolute;
-    bottom: 45px;
-    left: 48px;
-    right: 48px;
+    margin-top: auto;
+    padding-top: 28px;
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
 }
 
 .card-tags span {
-    border: 1px solid #ccd3d7;
+    border: 1px solid rgba(255,255,255,0.28);
     padding: 7px 9px;
-    font-size: 7px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.88);
 }
 
-.expertise-primary .card-tags span,
-.expertise-dark .card-tags span {
-    border-color: rgba(255,255,255,0.2);
+.expertise-primary .card-tags span {
+    border-color: rgba(11,24,36,0.35);
+    color: var(--navy);
 }
 
 
@@ -1705,6 +1765,14 @@ a {
 }
 
 
+/* Mid-size laptops: 2 x 2 expertise cards */
+@media (min-width: 1051px) and (max-width: 1279px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
 /* Short screens: keep the About page inside one screen */
 @media (min-width: 1051px) and (max-height: 820px) {
     .about-section { padding-top: 84px; padding-bottom: 36px; }
@@ -1720,6 +1788,10 @@ a {
 /* TABLET */
 
 @media (max-width: 1050px) {
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
     .above-fold {
         display: block;
@@ -1781,8 +1853,10 @@ a {
         border-right: 0;
     }
 
-    .expertise-grid {
-        grid-template-columns: 1fr 1fr;
+    .expertise-section {
+        display: block;
+        min-height: 0;
+        padding: 100px 5vw;
     }
 
     .technology-grid {
@@ -1978,7 +2052,7 @@ a {
 
     .number-block {
         border-right: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.12);
+        border-bottom: 1px solid rgba(11,24,36,0.25);
         padding-bottom: 30px;
     }
 
@@ -1990,23 +2064,35 @@ a {
         font-size: 55px;
     }
 
+    .expertise-section {
+        padding: 80px 22px;
+    }
+
+    .expertise-section::before {
+        width: 480px;
+        height: 480px;
+        right: -240px;
+        top: -80px;
+    }
+
+    .expertise-section::after {
+        display: none;
+    }
+
+    .expertise-head {
+        margin-bottom: 40px;
+    }
+
+    .expertise-head h2 {
+        font-size: clamp(40px, 12.5vw, 64px);
+    }
+
     .expertise-grid {
         grid-template-columns: 1fr;
     }
 
-    .expertise-card {
-        min-height: 430px;
-        padding: 30px;
-    }
-
-    .card-number {
-        margin-bottom: 70px;
-    }
-
-    .card-tags {
-        left: 30px;
-        right: 30px;
-        bottom: 30px;
+    .expertise-card h3 {
+        font-size: 38px;
     }
 
     .experience-panel {

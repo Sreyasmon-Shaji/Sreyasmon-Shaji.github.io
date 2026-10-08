@@ -705,7 +705,7 @@ a {
 
 .about-head h2 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(44px, 6vw, 96px);
+    font-size: clamp(44px, 5.2vw, 84px);
     line-height: 0.88;
     letter-spacing: -0.07em;
     font-weight: 600;
@@ -751,6 +751,7 @@ a {
 
 .about-intro .large-copy .hl {
     padding: 0 4px;
+    white-space: nowrap;
     background: linear-gradient(transparent 52%, var(--lime) 52%);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -760,6 +761,25 @@ a {
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+.about-focus-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: none;
+    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    color: #5b6872;
+}
+
+.about-focus-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(11,24,36,0.2);
 }
 
 .focus-item {

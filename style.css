@@ -2271,12 +2271,12 @@ a {
 }
 
 
-/* TECHNOLOGY (pale teal-mint light page: connects the teal Domain page before it; same dots, rings and lime accents) */
+/* TECHNOLOGY (warm sand light page: a new colour after the dark indigo Data Flow page; same dots, rings and lime accents) */
 
 .tech-section {
     position: relative;
     overflow: hidden;
-    background-color: #e3f0ec;
+    background-color: #f3e9d2;
     color: var(--dark);
     min-height: 100vh;
     min-height: 100svh;
@@ -2300,8 +2300,8 @@ a {
     height: 400px;
     right: -160px;
     top: -290px;
-    border: 1.5px solid rgba(10,51,64,0.4);
-    box-shadow: 0 0 40px rgba(10,51,64,0.12);
+    border: 1.5px solid rgba(120,90,30,0.4);
+    box-shadow: 0 0 40px rgba(120,90,30,0.12);
 }
 
 .tech-section::after {

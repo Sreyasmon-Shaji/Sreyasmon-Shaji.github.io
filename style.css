@@ -2667,7 +2667,7 @@ a {
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 20px;
     align-items: center;
-    padding: 24px 28px;
+    padding: 20px 26px;
     background-color: rgba(7,15,22,0.55);
     border: 1px solid rgba(255,255,255,0.22);
     border-top: 4px solid var(--lime);
@@ -2711,6 +2711,48 @@ a {
     font-style: normal;
     color: var(--navy);
 }
+
+.contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.contact-row .contact-link {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+    padding: 18px 20px;
+}
+
+.contact-row .contact-link strong {
+    font-size: clamp(16px, 1.45vw, 22px);
+    white-space: nowrap;
+}
+
+.contact-link-cv {
+    background-color: var(--lime);
+    border-color: var(--lime);
+    border-top-color: var(--lime);
+    color: var(--navy);
+}
+
+.contact-link-cv span {
+    color: rgba(11,24,36,0.7);
+}
+
+.contact-link-cv strong {
+    color: var(--navy);
+}
+
+.contact-link-cv em {
+    background: var(--navy);
+    color: var(--lime);
+}
+
+.contact-link-cv:hover {
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+}
+
 
 .contact-status {
     display: flex;

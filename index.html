@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261027">
+    <link rel="stylesheet" href="style.css?v=20261028">
 </head>
 
 <body>
@@ -826,127 +826,132 @@
                         <div class="about-eyebrow">HEALTHCARE DOMAIN</div>
 
                         <h2>
-                            One enterprise.<br>
-                            <em>Many moving parts.</em>
+                            The life of a claim.<br>
+                            <em>Almost end to end.</em>
                         </h2>
                     </div>
 
                     <p>
-                        Experience across interconnected US healthcare capabilities
-                        where business rules, legacy systems, data and modern
-                        integration layers must work together reliably.
+                        Hands-on across almost the complete healthcare claim
+                        lifecycle in US healthcare systems, from EDI mapping
+                        through pricing and adjudication to the EOB that reaches
+                        the member.
                     </p>
                 </div>
 
-                <div class="domain-body">
+                <div class="life" aria-label="Healthcare claim lifecycle">
 
-                    <div class="domain-grid">
-
-                        <article class="domain-card domain-primary">
-                            <h3>Claims<br>Processing</h3>
-                            <p>
-                                Adjudication logic for a new claims system: online screens
-                                for manual adjudication and automated adjudication batch
-                                jobs.
-                            </p>
-                            <span class="domain-ref">IMAGE REWRITE</span>
-                        </article>
-
-                        <article class="domain-card">
-                            <h3>Benefits &amp;<br>Eligibility</h3>
-                            <p>
-                                Benefit eligibility rules validated against COBOL, IMS DB
-                                and DB2, powering provider benefit verification in real
-                                time.
-                            </p>
-                            <span class="domain-ref">BENEFITS 24/7</span>
-                        </article>
-
-                        <article class="domain-card">
-                            <h3>Membership &amp;<br>Provider Data</h3>
-                            <p>
-                                Membership data flows into eHub, plus masked and mocked
-                                membership and provider data for lower regions.
-                            </p>
-                            <span class="domain-ref">eHUB · TEST DATA</span>
-                        </article>
-
-                        <article class="domain-card">
-                            <h3>Integration &amp;<br>Data Flow</h3>
-                            <p>
-                                eHub and SOA services moving mainframe data to the Provider
-                                and Member Portals through scheduled and ad-hoc batch loads.
-                            </p>
-                            <span class="domain-ref">SOA API SERVICES</span>
-                        </article>
-
-                        <article class="domain-card">
-                            <h3>Production<br>Support</h3>
-                            <p>
-                                Production defect resolution and root-cause analysis on
-                                mainframe healthcare applications.
-                            </p>
-                            <span class="domain-ref">CARELON (LEGATO)</span>
-                        </article>
-
-                        <article class="domain-card">
-                            <h3>Mainframe<br>Modernization</h3>
-                            <p>
-                                Analysing COBOL, Copybooks and DB2 structures and authoring
-                                specifications for automated COBOL-to-Java conversion.
-                            </p>
-                            <span class="domain-ref">CLAIMS MODERNIZATION</span>
-                        </article>
-
+                    <div class="life-phases" aria-hidden="true">
+                        <span class="phase phase-intake">INTAKE &amp; VALIDATION</span>
+                        <span class="phase phase-decide">PRICING &amp; DECISION</span>
+                        <span class="phase phase-out">RECORD &amp; COMMUNICATE</span>
                     </div>
 
-                    <div class="domain-stack" aria-label="Where my work sits in the healthcare technology stack">
+                    <ol class="life-track">
 
-                        <div class="stack-label">WHERE THE WORK SITS</div>
-
-                        <div class="stack-layer">
-                            <span class="layer-name">EXPERIENCE</span>
-                            <div class="layer-chips">
-                                <span>PROVIDER PORTAL</span>
-                                <span>MEMBER PORTAL</span>
+                        <li class="stage stage-ctx">
+                            <span class="stage-node">1</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">INTAKE</span>
+                                <h3>EDI / Paper<br>Claims</h3>
+                                <p>Providers submit claims electronically as EDI files, or on paper.</p>
+                                <span class="stage-tag">CONTEXT</span>
                             </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">2</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">INTAKE</span>
+                                <h3>Mapper</h3>
+                                <p>Incoming EDI and paper data is mapped into the internal claim format.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">3</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">INTAKE</span>
+                                <h3>Edit</h3>
+                                <p>Claims are checked for missing data, invalid codes and member or provider issues.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">4</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">INTAKE</span>
+                                <h3>Load</h3>
+                                <p>Validated claims are loaded into the claims system for processing.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">5</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">DECISION</span>
+                                <h3>Pricing</h3>
+                                <p>Contracted rates and fee schedules set the allowed amount.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">6</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">DECISION</span>
+                                <h3>Adjudication</h3>
+                                <p>Business rules decide whether the claim is paid, pended or denied.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">7</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">DECISION</span>
+                                <h3>Finalization</h3>
+                                <p>The decision and payment amount are finalized for the claim.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-ctx">
+                            <span class="stage-node">8</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">OUTPUT</span>
+                                <h3>History<br>Update</h3>
+                                <p>The outcome is recorded in the member’s claim history.</p>
+                                <span class="stage-tag">CONTEXT</span>
+                            </div>
+                        </li>
+
+                        <li class="stage stage-hands">
+                            <span class="stage-node">9</span>
+                            <div class="stage-card">
+                                <span class="stage-phase">OUTPUT</span>
+                                <h3>EOB</h3>
+                                <p>An Explanation of Benefits is created and sent to the member.</p>
+                                <span class="stage-tag">HANDS-ON</span>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="life-foot">
+                        <div class="life-legend">
+                            <span class="legend-hands"><i></i>STAGES I HAVE WORKED ON</span>
+                            <span class="legend-ctx"><i></i>SURROUNDING CONTEXT</span>
                         </div>
 
-                        <div class="stack-link"></div>
-
-                        <div class="stack-layer">
-                            <span class="layer-name">INTEGRATION</span>
-                            <div class="layer-chips">
-                                <span>eHUB</span>
-                                <span>SOA</span>
-                                <span>APIs</span>
-                                <span>ETL</span>
-                            </div>
+                        <div class="life-outcomes">
+                            <em>ADJUDICATION OUTCOMES</em>
+                            <span>PAID</span>
+                            <span>PENDED</span>
+                            <span>DENIED</span>
                         </div>
-
-                        <div class="stack-link"></div>
-
-                        <div class="stack-layer stack-core">
-                            <span class="layer-name">MAINFRAME CORE</span>
-                            <div class="layer-chips">
-                                <span>COBOL</span>
-                                <span>JCL</span>
-                                <span>IMS DC / TM</span>
-                                <span>BATCH</span>
-                            </div>
-                        </div>
-
-                        <div class="stack-link"></div>
-
-                        <div class="stack-layer">
-                            <span class="layer-name">DATA</span>
-                            <div class="layer-chips">
-                                <span>DB2</span>
-                                <span>IMS DB</span>
-                                <span>VSAM</span>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>

@@ -1550,19 +1550,19 @@ a {
 }
 
 .domain-section::before {
-    width: 700px;
-    height: 700px;
-    right: -240px;
-    top: -330px;
+    width: 400px;
+    height: 400px;
+    right: -160px;
+    top: -290px;
     border: 1.5px solid rgba(120,225,210,0.45);
     box-shadow: 0 0 40px rgba(120,225,210,0.12);
 }
 
 .domain-section::after {
-    width: 440px;
-    height: 440px;
-    right: -110px;
-    top: -210px;
+    width: 250px;
+    height: 250px;
+    right: -85px;
+    top: -215px;
     border: 1px dashed rgba(215,255,69,0.5);
 }
 
@@ -1719,6 +1719,22 @@ a {
     display: none;
 }
 
+.stage-ico {
+    flex: none;
+    width: 26px;
+    height: 26px;
+    margin-bottom: 12px;
+    fill: none;
+    stroke: var(--lime);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.stage-ctx .stage-ico {
+    stroke: rgba(255,255,255,0.6);
+}
+
 .stage-card h3 {
     min-height: 2em;
     margin-bottom: 10px;
@@ -1840,19 +1856,19 @@ a {
 }
 
 .flow-section::before {
-    width: 700px;
-    height: 700px;
-    right: -240px;
-    top: -330px;
+    width: 400px;
+    height: 400px;
+    right: -160px;
+    top: -290px;
     border: 1.5px solid rgba(150,165,255,0.5);
     box-shadow: 0 0 40px rgba(150,165,255,0.15);
 }
 
 .flow-section::after {
-    width: 440px;
-    height: 440px;
-    right: -110px;
-    top: -210px;
+    width: 250px;
+    height: 250px;
+    right: -85px;
+    top: -215px;
     border: 1px dashed rgba(215,255,69,0.5);
 }
 
@@ -1973,20 +1989,23 @@ a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 14px;
+    gap: 12px;
 }
 
 .flow-db {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
+    padding: 14px 16px;
+    border: 1px dashed rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.04);
 }
 
 .flow-cyl {
     flex: none;
-    width: 40px;
-    height: 47px;
+    width: 46px;
+    height: 54px;
     fill: none;
     stroke: var(--lime);
     stroke-width: 2;
@@ -2277,19 +2296,19 @@ a {
 }
 
 .tech-section::before {
-    width: 700px;
-    height: 700px;
-    right: -240px;
-    top: -330px;
+    width: 400px;
+    height: 400px;
+    right: -160px;
+    top: -290px;
     border: 1.5px solid rgba(10,51,64,0.4);
     box-shadow: 0 0 40px rgba(10,51,64,0.12);
 }
 
 .tech-section::after {
-    width: 440px;
-    height: 440px;
-    right: -110px;
-    top: -210px;
+    width: 250px;
+    height: 250px;
+    right: -85px;
+    top: -215px;
     border: 1px dashed rgba(11,24,36,0.3);
 }
 
@@ -2724,6 +2743,7 @@ a {
     .domain-section { padding-top: 60px; padding-bottom: 36px; }
     .domain-head { margin-bottom: 30px; }
     .life-foot { margin-top: 22px; }
+    .stage-ico { width: 22px; height: 22px; margin-bottom: 8px; }
 }
 
 

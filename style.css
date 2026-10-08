@@ -643,16 +643,88 @@ a {
 }
 
 
-/* ABOUT */
+/* ABOUT (continues the dark hero look) */
 
 .about-section {
-    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    color: #fff;
+    padding: 120px 5vw 130px;
+    background-image: radial-gradient(rgba(255,255,255,0.14) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
+}
+
+/* Orbit rings echo the hero graphic */
+.about-section::before,
+.about-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.about-section::before {
+    width: 700px;
+    height: 700px;
+    right: -240px;
+    top: -330px;
+    border: 1.5px solid rgba(107,164,255,0.35);
+    box-shadow: 0 0 40px rgba(36,119,255,0.18), inset 0 0 40px rgba(36,119,255,0.1);
+}
+
+.about-section::after {
+    width: 440px;
+    height: 440px;
+    right: -110px;
+    top: -210px;
+    border: 1px dashed rgba(215,255,69,0.3);
+}
+
+.about-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-head {
+    margin-bottom: 70px;
+}
+
+.about-eyebrow {
+    margin-bottom: 28px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--lime);
+}
+
+.about-eyebrow span {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 8px;
+    border: 1px solid rgba(215,255,69,0.5);
+}
+
+.about-head h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(44px, 6vw, 96px);
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+    font-weight: 600;
+}
+
+.about-head h2 em {
+    font-style: normal;
+    color: var(--blue-light);
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 100px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 80px;
+    align-items: stretch;
 }
 
 .about-intro {
@@ -662,26 +734,31 @@ a {
 .about-intro p {
     font-size: 14px;
     line-height: 1.75;
-    color: #65727b;
+    color: #aebac2;
     margin-bottom: 22px;
 }
 
 .about-intro .large-copy {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(26px, 2.6vw, 38px);
-    line-height: 1.15;
-    color: var(--dark);
+    font-size: clamp(24px, 2.3vw, 34px);
+    line-height: 1.18;
+    color: #fff;
     letter-spacing: -0.04em;
     margin-bottom: 0;
+}
+
+.about-intro .large-copy strong {
+    color: var(--lime);
+    font-weight: 600;
 }
 
 /* Profile photo + intro headline row */
 .about-photo-row {
     display: grid;
-    grid-template-columns: 190px 1fr;
-    gap: 40px;
-    align-items: start;
-    margin-bottom: 35px;
+    grid-template-columns: 170px 1fr;
+    gap: 36px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .about-photo-frame {
@@ -691,8 +768,8 @@ a {
 .about-photo-frame::before {
     content: "";
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: 10px;
+    left: 10px;
     width: 100%;
     height: 100%;
     border: 2px solid var(--lime);
@@ -710,41 +787,57 @@ a {
 }
 
 .about-focus {
-    border-top: 1px solid var(--line-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .focus-item {
+    flex: 1;
+    align-items: center;
     display: grid;
-    grid-template-columns: 45px 1fr;
-    gap: 20px;
-    padding: 27px 0;
-    border-bottom: 1px solid var(--line-dark);
+    grid-template-columns: 38px 1fr;
+    gap: 18px;
+    padding: 26px 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-left: 2px solid var(--lime);
+    background: rgba(255,255,255,0.035);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.focus-item:hover {
+    background: rgba(215,255,69,0.06);
+    border-color: rgba(215,255,69,0.5);
 }
 
 .focus-item > span {
-    font-size: 8px;
-    font-weight: 900;
-    color: var(--blue);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--lime);
 }
 
 .focus-item strong {
     display: block;
-    font-size: 10px;
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    letter-spacing: 0.12em;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .focus-item p {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #68747c;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #aebac2;
 }
 
 
 /* NUMBERS */
 
 .numbers-section {
-    background: var(--navy);
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(255,255,255,0.1);
     color: #fff;
     padding: 90px 5vw;
     display: grid;
@@ -1661,13 +1754,13 @@ a {
         margin-top: 20px;
     }
 
-    .about-grid {
-        gap: 50px;
+    .about-section {
+        padding: 100px 5vw;
     }
 
-    .about-photo-row {
-        grid-template-columns: 160px 1fr;
-        gap: 28px;
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     .numbers-section {
@@ -1832,22 +1925,46 @@ a {
         font-size: clamp(50px, 15vw, 75px);
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
+    .about-section {
+        padding: 80px 22px;
+    }
+
+    .about-section::before {
+        width: 480px;
+        height: 480px;
+        right: -240px;
+        top: -80px;
+    }
+
+    .about-section::after {
+        display: none;
+    }
+
+    .about-head {
+        margin-bottom: 45px;
+    }
+
+    .about-head h2 {
+        font-size: clamp(40px, 12.5vw, 64px);
     }
 
     .about-photo-row {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 28px;
     }
 
     .about-photo-frame {
-        max-width: 220px;
+        max-width: 200px;
     }
 
     .about-intro .large-copy {
-        font-size: 30px;
+        font-size: 26px;
+    }
+
+    .focus-item {
+        padding: 22px 20px;
+        grid-template-columns: 30px 1fr;
+        gap: 14px;
     }
 
     .numbers-section {

@@ -1026,84 +1026,209 @@ a {
 }
 
 
-/* EXPERIENCE */
+/* EXPERIENCE (deep royal-blue page: continues the blue page 3, same dots, rings and lime accents) */
 
 .experience-section {
-    background: var(--white);
-}
-
-.experience-panel {
-    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    background-color: #0c2459;
     color: #fff;
-    padding: 55px;
-}
-
-.experience-header {
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    align-items: center;
+    padding: 96px 5vw 64px;
+    background-image: radial-gradient(rgba(255,255,255,0.15) 1.3px, transparent 1.6px);
+    background-size: 24px 24px;
 }
 
-.experience-label,
-.timeline-label {
-    display: block;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 15px;
+.experience-section::before,
+.experience-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-.experience-header h3 {
+.experience-section::before {
+    width: 700px;
+    height: 700px;
+    right: -240px;
+    top: -330px;
+    border: 1.5px solid rgba(107,164,255,0.6);
+    box-shadow: 0 0 40px rgba(36,119,255,0.25);
+}
+
+.experience-section::after {
+    width: 440px;
+    height: 440px;
+    right: -110px;
+    top: -210px;
+    border: 1px dashed rgba(215,255,69,0.5);
+}
+
+.experience-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.experience-head {
+    margin-bottom: 40px;
+}
+
+.experience-head h2 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(32px, 4vw, 58px);
-    letter-spacing: -0.055em;
+    font-size: clamp(40px, 4.4vw, 72px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    font-weight: 600;
+    color: #fff;
 }
 
-.experience-location {
-    font-size: 8px;
+.experience-head h2 em {
+    font-style: normal;
+    color: var(--lime);
+}
+
+.exp-client {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 44px;
+}
+
+.exp-client::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.22);
+}
+
+.exp-client-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.65);
+}
+
+.exp-client strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(20px, 1.9vw, 28px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+.exp-client em {
+    font-style: normal;
+    padding: 6px 10px;
+    border: 1px solid rgba(215,255,69,0.6);
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.14em;
     color: var(--lime);
 }
 
-.experience-timeline {
+.exp-timeline {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    padding-top: 50px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.timeline-item {
+.exp-step {
     position: relative;
-    padding-left: 20px;
-    border-left: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 34px 44px 0 0;
 }
 
-.timeline-dot {
-    width: 7px;
-    height: 7px;
+.exp-step::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.35);
+}
+
+.exp-step::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     background: var(--lime);
-    position: absolute;
-    left: -4px;
-    top: 0;
+    box-shadow: 0 0 0 5px rgba(215,255,69,0.2);
 }
 
-.timeline-content h4 {
+.exp-years {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 22px;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--lime);
 }
 
-.timeline-content p {
-    font-size: 12px;
-    line-height: 1.65;
-    color: #aebac2;
+.exp-org {
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.7);
+}
+
+.exp-step h3 {
+    margin: 20px 0 20px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(28px, 2.7vw, 40px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    font-weight: 600;
+}
+
+.exp-step ul {
+    flex: 1;
+    list-style: none;
+}
+
+.exp-step li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.86);
+}
+
+.exp-step li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    background: var(--lime);
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-top: 14px;
+}
+
+.exp-tags span {
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 7px 9px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #fff;
 }
 
 
@@ -1785,6 +1910,11 @@ a {
     .about-intro p { font-size: 15px; line-height: 1.6; }
     .focus-item { padding: 12px 24px; }
     .focus-item p { font-size: 12.5px; line-height: 1.55; }
+    .experience-section { padding-top: 84px; padding-bottom: 36px; }
+    .experience-head { margin-bottom: 26px; }
+    .exp-client { margin-bottom: 30px; }
+    .exp-step { padding-top: 26px; }
+    .exp-step li { font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
 }
 
 
@@ -1860,6 +1990,35 @@ a {
         display: block;
         min-height: 0;
         padding: 100px 5vw;
+    }
+
+    .experience-section {
+        display: block;
+        min-height: 0;
+        padding: 100px 5vw;
+    }
+
+    .exp-timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .exp-step {
+        padding: 0 0 44px 30px;
+    }
+
+    .exp-step::before {
+        top: 6px;
+        bottom: 0;
+        left: 5px;
+        right: auto;
+        width: 1px;
+        height: auto;
+    }
+
+    .exp-step::after {
+        top: 0;
+        left: 0;
     }
 
     .technology-grid {
@@ -2099,21 +2258,36 @@ a {
         font-size: 38px;
     }
 
-    .experience-panel {
-        padding: 30px;
+    .experience-section {
+        padding: 80px 22px;
     }
 
-    .experience-header {
-        display: block;
+    .experience-section::before {
+        width: 480px;
+        height: 480px;
+        right: -240px;
+        top: -80px;
     }
 
-    .experience-location {
-        margin-top: 25px;
+    .experience-section::after {
+        display: none;
     }
 
-    .experience-timeline {
-        grid-template-columns: 1fr;
-        gap: 35px;
+    .experience-head {
+        margin-bottom: 32px;
+    }
+
+    .experience-head h2 {
+        font-size: clamp(40px, 12.5vw, 64px);
+    }
+
+    .exp-client {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
+
+    .exp-client::after {
+        display: none;
     }
 
     .projects-grid {

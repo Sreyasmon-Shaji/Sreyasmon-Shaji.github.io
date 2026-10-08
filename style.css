@@ -452,9 +452,9 @@ a {
     min-height: 110px;
     background: var(--lime);
     display: grid;
-    grid-template-columns: 0.7fr 1px 1.7fr 1px 1.3fr;
+    grid-template-columns: 0.55fr 1px 2.4fr 1px 1.2fr;
     align-items: center;
-    padding: 18px 5vw;
+    padding: 12px 5vw;
     gap: 30px;
 }
 
@@ -481,35 +481,49 @@ a {
 }
 
 .career-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
     min-width: 0;
 }
 
-.career-row {
+.career-item {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
-    white-space: nowrap;
-    font-size: 11px;
-    line-height: 1.3;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding-top: 9px;
+    border-top: 2px solid rgba(16,24,32,0.85);
 }
 
-.career-row span {
-    flex: 0 0 66px;
+.career-years {
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.12em;
 }
 
-.career-row strong {
-    font-weight: 800;
+.career-company {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
-.career-row em {
-    font-style: normal;
+.career-place {
+    font-size: 10px;
     font-weight: 500;
-    color: rgba(16,24,32,0.8);
+    line-height: 1.3;
+    color: rgba(16,24,32,0.72);
+}
+
+.career-role {
+    margin-top: 3px;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .positioning-wide {
@@ -1485,22 +1499,12 @@ a {
     }
 
     .positioning-strip {
-        grid-template-columns: 1fr 1px 1.4fr 1px 1.2fr;
-    }
-
-    .career-row {
-        flex-wrap: wrap;
-        white-space: normal;
-        row-gap: 0;
-    }
-
-    .career-row em {
-        flex-basis: 100%;
-        padding-left: 76px;
+        grid-template-columns: 1fr 1px 1.8fr 1px 1.2fr;
     }
 
     .career-timeline {
-        gap: 5px;
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
     .hero {

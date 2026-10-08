@@ -4067,3 +4067,65 @@ a {
         font-size: 17px;
     }
 }
+
+
+/* MENU (floating glass pill with an accent call-to-action) */
+
+.brand-mark {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--lime);
+    color: var(--navy);
+    font-size: 14px;
+    box-shadow: 0 8px 22px rgba(142,193,255,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-mark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(142,193,255,0.45);
+}
+
+.main-nav {
+    gap: 2px;
+    padding: 6px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.main-nav a {
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: rgba(255,255,255,0.78);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(142,193,255,0.18);
+    color: #fff;
+}
+
+.main-nav a:last-child {
+    margin-left: 6px;
+    background: var(--lime);
+    color: var(--navy);
+}
+
+.main-nav a:last-child:hover {
+    background: #b9d8ff;
+    color: var(--navy);
+}
+
+@media (max-width: 1179px) {
+    .main-nav a {
+        padding: 9px 11px;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+    }
+}

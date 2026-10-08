@@ -286,9 +286,9 @@ a {
     vertical-align: 1px;
 }
 
-/* Orbit labels are positioned around the orbit. The "stakeholder
-   management" label sits slightly outside the right edge so it
-   never touches the 12+ circle. */
+/* All orbit labels are kept INSIDE the orbit's own box (0%–100%)
+   so they can never be pushed past the edge of the viewport on
+   narrower desktop widths. */
 
 .label-one {
     top: 5%;
@@ -650,7 +650,7 @@ a {
     overflow: hidden;
     background-color: #eaf0f6;
     color: var(--dark);
-    padding: 120px 5vw 130px;
+    padding: 120px 5vw;
     background-image: radial-gradient(rgba(11,24,36,0.13) 1.3px, transparent 1.6px);
     background-size: 24px 24px;
 }
@@ -726,13 +726,17 @@ a {
 
 .about-intro {
     max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .about-intro p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.75;
     color: #46535c;
-    margin-bottom: 22px;
+    margin: 0;
 }
 
 .about-intro p strong {
@@ -742,11 +746,10 @@ a {
 
 .about-intro .large-copy {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(26px, 2.6vw, 40px);
-    line-height: 1.18;
+    font-size: clamp(28px, 3.1vw, 46px);
+    line-height: 1.16;
     color: var(--navy);
     letter-spacing: -0.045em;
-    margin-bottom: 36px;
 }
 
 .about-intro .large-copy .hl {
@@ -763,19 +766,18 @@ a {
     gap: 14px;
 }
 
-.about-focus-label {
+.about-label {
     display: flex;
     align-items: center;
     gap: 14px;
     flex: none;
-    margin-bottom: 4px;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.16em;
     color: #5b6872;
 }
 
-.about-focus-label::after {
+.about-label::after {
     content: "";
     flex: 1;
     height: 1px;
@@ -788,7 +790,7 @@ a {
     display: grid;
     grid-template-columns: 38px 1fr;
     gap: 18px;
-    padding: 26px 28px;
+    padding: 22px 28px;
     border: 1px solid rgba(11,24,36,0.12);
     border-left: 4px solid var(--lime);
     background: #fff;

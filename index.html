@@ -7,7 +7,7 @@
     <title>Sreyasmon Shaji | System Analyst | Mainframe Expert | Requirements Analyst</title>
 
     <meta name="description"
-          content="Sreyasmon Shaji — System Analyst, Mainframe Expert and Requirements Analyst with 12+ years of experience across healthcare IT, mainframe systems, enterprise integration and technology delivery.">
+          content="Sreyasmon Shaji — System Analyst, Mainframe Expert and Requirements Analyst with 12+ years of experience across healthcare IT, mainframe systems, enterprise integration and technology delivery. Systemanalytiker och kravanalytiker med mainframe-erfarenhet, Stockholm.">
 
     <meta name="theme-color" content="#0b1824">
     <link rel="canonical" href="https://sreyasmon-shaji.github.io/">
@@ -35,6 +35,7 @@
       "@type": "Person",
       "name": "Sreyasmon Shaji",
       "jobTitle": "System Analyst and Mainframe Expert",
+      "alternateName": "Systemanalytiker",
       "url": "https://sreyasmon-shaji.github.io/",
       "image": "https://sreyasmon-shaji.github.io/assets/sreyasmon-profile.jpg",
       "email": "mailto:sreyasmon87@gmail.com",
@@ -49,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261047">
+    <link rel="stylesheet" href="style.css?v=20261048">
 </head>
 
 <body>
@@ -480,6 +481,17 @@
                         </div>
                     </article>
 
+                </div>
+
+                <div class="deliver-strip">
+                    <span class="deliver-label">WHAT I DELIVER</span>
+                    <ul>
+                        <li>Requirement specifications</li>
+                        <li>Impact &amp; scope analysis</li>
+                        <li>Business-rule documentation</li>
+                        <li>Stakeholder alignment</li>
+                        <li>Test data &amp; release support</li>
+                    </ul>
                 </div>
 
             </div>
@@ -1387,10 +1399,8 @@
 
                     <div class="contact-roles">
                         <span>SYSTEM ANALYST</span>
-                        <span>PROJECT LEAD</span>
                         <span>MAINFRAME EXPERT</span>
                         <span>REQUIREMENTS ANALYST</span>
-                        <span>TECHNICAL PROJECT MANAGER</span>
                     </div>
                 </div>
 
@@ -1510,7 +1520,32 @@
             STOCKHOLM · SWEDEN
         </div>
 
+        <div class="footer-sv">
+            Systemanalytiker · Kravanalytiker · Mainframe-specialist · Stockholm
+        </div>
+
     </footer>
+
+    <script>
+    (function () {
+        var body = document.body;
+        function onScroll() { body.classList.toggle('scrolled', window.scrollY > 90); }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        var links = {};
+        document.querySelectorAll('.main-nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        Object.keys(links).forEach(function (k) { links[k].classList.toggle('active', k === e.target.id); });
+                    }
+                });
+            }, { rootMargin: '-45% 0px -45% 0px' });
+            Object.keys(links).forEach(function (k) { var s = document.getElementById(k); if (s) io.observe(s); });
+        }
+    })();
+    </script>
 
 </body>
 </html>

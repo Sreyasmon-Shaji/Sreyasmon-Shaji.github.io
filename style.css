@@ -4506,3 +4506,118 @@ body {
     font-weight: 900;
     opacity: 0.8;
 }
+
+
+/* PROJECT CARDS: one-line summary under each title */
+
+.project-oneliner {
+    max-width: 62ch;
+    margin: -6px 0 22px !important;
+    padding-left: 14px;
+    border-left: 3px solid var(--lime);
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 1.5 !important;
+    color: #fff !important;
+}
+
+.project-lime .project-oneliner {
+    color: var(--navy) !important;
+    border-left-color: var(--navy);
+}
+
+
+/* PHONE MENU */
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .site-header {
+        position: fixed;
+        pointer-events: none;
+    }
+
+    .site-header .brand-mark,
+    .site-header .menu-toggle,
+    .site-header .main-nav {
+        pointer-events: auto;
+    }
+
+    .nav-wrap {
+        padding: 12px 18px;
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 44px;
+        height: 40px;
+        padding: 0;
+        background: rgba(11,24,36,0.85);
+        border: 1px solid rgba(142,193,255,0.35);
+        border-radius: 12px;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-open .menu-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+    .menu-open .menu-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-open .main-nav {
+        position: fixed;
+        top: 64px;
+        left: 14px;
+        right: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 10px;
+        background: rgba(11,24,36,0.97);
+        border: 1px solid rgba(142,193,255,0.3);
+        border-radius: 18px;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    }
+
+    .menu-open .main-nav a {
+        padding: 14px 16px;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+
+    .menu-open .main-nav a:last-child {
+        margin: 6px 0 0;
+        text-align: center;
+    }
+
+    .scrolled .brand-mark {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+    }
+}

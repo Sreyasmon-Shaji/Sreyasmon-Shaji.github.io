@@ -4370,3 +4370,139 @@ a {
     .label-seven { left: 16%; }
     .label-three { left: 84%; }
 }
+
+
+/* IMAGE REWRITE title: the process name in brackets */
+
+.art-index u {
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #5b7aa3;
+}
+
+.project-card h3 .h3-sub {
+    display: block;
+    margin-top: 0.45em;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.34em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: rgba(255,255,255,0.72);
+}
+
+
+/* CONTINUITY: thin progress line, side page rail and numbered section labels, the same on every page */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 40;
+    pointer-events: none;
+}
+
+.scroll-progress i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #6ba4ff, var(--lime));
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.page-rail {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    z-index: 30;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 6px;
+    background: rgba(11,24,36,0.84);
+    border: 1px solid rgba(142,193,255,0.22);
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.page-rail a {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 14px;
+}
+
+.page-rail a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+}
+
+.page-rail a:hover::before {
+    background: #fff;
+}
+
+.page-rail a.active::before {
+    width: 10px;
+    height: 10px;
+    background: var(--lime);
+    box-shadow: 0 0 0 3px rgba(142,193,255,0.25);
+}
+
+.page-rail a span {
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    padding: 5px 9px;
+    background: var(--navy);
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(6px, -50%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.page-rail a:hover span {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+@media (max-width: 1099px) {
+    .page-rail {
+        display: none;
+    }
+}
+
+body {
+    counter-reset: pg;
+}
+
+.about-eyebrow::before,
+.contact-eyebrow::before {
+    counter-increment: pg;
+    content: counter(pg, decimal-leading-zero);
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(11,24,36,0.35);
+    font-weight: 900;
+    opacity: 0.8;
+}

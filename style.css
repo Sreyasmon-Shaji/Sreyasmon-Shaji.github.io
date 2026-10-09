@@ -4309,3 +4309,40 @@ a {
     .exp-tags { gap: 7px; padding-top: 12px; }
     .exp-tags span { padding: 6px 4px; }
 }
+
+
+/* HERO ORBIT: all eight labels the same size, top and bottom ones centred on the ring */
+
+.orbit-label {
+    box-sizing: border-box;
+    width: 20em;
+    text-align: center;
+}
+
+.label-one,
+.label-five {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 1051px) {
+    .label-seven {
+        left: 0;
+        transform: translate(-50%, 12%);
+    }
+
+    .label-three {
+        right: 0;
+        transform: translate(50%, 0);
+    }
+
+    .label-two,
+    .label-four {
+        right: 3%;
+    }
+
+    .label-six,
+    .label-eight {
+        left: 3%;
+    }
+}

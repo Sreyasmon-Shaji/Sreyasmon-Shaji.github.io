@@ -50,10 +50,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261052">
+    <link rel="stylesheet" href="style.css?v=20261053">
 </head>
 
 <body>
+
+    <div class="scroll-progress" aria-hidden="true"><i></i></div>
+
+    <nav class="page-rail" aria-label="Page sections">
+        <a href="#top" data-target="top" aria-label="Home"><span>HOME</span></a>
+        <a href="#about" data-target="about" aria-label="About"><span>ABOUT</span></a>
+        <a href="#expertise" data-target="expertise" aria-label="Expertise"><span>EXPERTISE</span></a>
+        <a href="#experience" data-target="experience" aria-label="Experience"><span>EXPERIENCE</span></a>
+        <a href="#projects" data-target="projects" aria-label="Projects"><span>PROJECTS</span></a>
+        <a href="#domain" data-target="domain" aria-label="Domain"><span>DOMAIN</span></a>
+        <a href="#dataflow" data-target="dataflow" aria-label="Data flow"><span>DATA FLOW</span></a>
+        <a href="#technology" data-target="technology" aria-label="Technology"><span>TECHNOLOGY</span></a>
+        <a href="#contact" data-target="contact" aria-label="Contact"><span>CONTACT</span></a>
+    </nav>
 
     <!-- NAVIGATION -->
     <header class="site-header">
@@ -551,7 +565,7 @@
                         <ul>
                             <li>Developed and supported COBOL, JCL, DB2, VSAM and IMS DB applications for US healthcare systems.</li>
                             <li>Used IBM mainframe utilities and GDGs for batch file processing and data handling.</li>
-                            <li>Built the Image claims adjudication rewrite largely independently, with IMS DC/TM screens and batch jobs.</li>
+                            <li>Built the Image Rewrite (Claims Adjudication Process) largely independently, with IMS DC/TM screens and batch jobs.</li>
                             <li>Acted as project lead for a period and mentored juniors; earned formal client recognition and a performance reward.</li>
                         </ul>
                         <div class="exp-tags">
@@ -626,7 +640,7 @@
                     <ol class="head-art art-index" aria-hidden="true">
                         <li><b>01</b><span>Benefits 24/7</span><i>SYSTEM ANALYST</i></li>
                         <li><b>02</b><span>Claims Modernization</span><i>SYSTEM ANALYST</i></li>
-                        <li><b>03</b><span>Image Rewrite</span><i>MAINFRAME DEV</i></li>
+                        <li><b>03</b><span>Image Rewrite <u>(Claims Adjudication Process)</u></span><i>MAINFRAME DEV</i></li>
                         <li><b>04</b><span>SOA API Services (eHub)</span><i>INTEGRATION</i></li>
                         <li><b>05</b><span>Test Data Management</span><i>DATA</i></li>
                     </ol>
@@ -766,7 +780,7 @@
                         </div>
 
                         <span class="project-kicker">SENIOR SOFTWARE DEVELOPER · MAINFRAME DEVELOPMENT</span>
-                        <h3>Image Rewrite</h3>
+                        <h3>Image Rewrite<span class="h3-sub">(Claims Adjudication Process)</span></h3>
 
                         <div class="project-body">
                             <p>
@@ -1536,20 +1550,37 @@
     <script>
     (function () {
         var body = document.body;
-        function onScroll() { body.classList.toggle('scrolled', window.scrollY > 90); }
+        var bar = document.querySelector('.scroll-progress i');
+        function onScroll() {
+            body.classList.toggle('scrolled', window.scrollY > 90);
+            if (bar) {
+                var max = document.documentElement.scrollHeight - window.innerHeight;
+                bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+            }
+        }
         window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
         onScroll();
+
         var links = {};
-        document.querySelectorAll('.main-nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+        document.querySelectorAll('.main-nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = [a]; });
+        document.querySelectorAll('.page-rail a').forEach(function (a) {
+            var k = a.getAttribute('data-target');
+            (links[k] = links[k] || []).push(a);
+        });
+        function setActive(id) {
+            Object.keys(links).forEach(function (k) {
+                links[k].forEach(function (a) { a.classList.toggle('active', k === id); });
+            });
+        }
         if ('IntersectionObserver' in window) {
             var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (e) {
-                    if (e.isIntersecting) {
-                        Object.keys(links).forEach(function (k) { links[k].classList.toggle('active', k === e.target.id); });
-                    }
-                });
+                entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.getAttribute('data-nav')); });
             }, { rootMargin: '-45% 0px -45% 0px' });
-            Object.keys(links).forEach(function (k) { var s = document.getElementById(k); if (s) io.observe(s); });
+            Object.keys(links).forEach(function (k) {
+                var s = k === 'top' ? document.querySelector('.above-fold') : document.getElementById(k);
+                if (s) { s.setAttribute('data-nav', k); io.observe(s); }
+            });
         }
     })();
     </script>

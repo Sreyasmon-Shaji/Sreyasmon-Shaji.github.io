@@ -4346,3 +4346,27 @@ a {
         left: 3%;
     }
 }
+
+
+/* HERO ORBIT (final): the eight labels sit evenly on the outer ring, like clock positions */
+
+.orbit-label {
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+
+.label-one   { left: 50%;   top: 5%;    }
+.label-two   { left: 81.8%; top: 18.2%; }
+.label-three { left: 95%;   top: 50%;   }
+.label-four  { left: 81.8%; top: 81.8%; }
+.label-five  { left: 50%;   top: 95%;   }
+.label-six   { left: 18.2%; top: 81.8%; }
+.label-seven { left: 5%;    top: 50%;   }
+.label-eight { left: 18.2%; top: 18.2%; }
+
+@media (max-width: 720px) {
+    .orbit-label { width: 17.5em; }
+    .label-seven { left: 16%; }
+    .label-three { left: 84%; }
+}

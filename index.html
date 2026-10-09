@@ -50,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=20261053">
+    <link rel="stylesheet" href="style.css?v=20261054">
 </head>
 
 <body>
@@ -83,6 +83,8 @@
                 <a href="#technology">TECHNOLOGY</a>
                 <a href="#contact">CONTACT</a>
             </nav>
+
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </header>
 
@@ -658,6 +660,7 @@
 
                         <span class="project-kicker">SYSTEM ANALYST · HEALTHCARE · AGILE DELIVERY</span>
                         <h3>Benefits 24/7</h3>
+                        <p class="project-oneliner">Gathered requirements and validated the COBOL, IMS DB and DB2 logic behind a provider benefits search, correcting 50+ incorrect lookup results.</p>
 
                         <div class="feature-grid">
 
@@ -732,6 +735,7 @@
 
                         <span class="project-kicker">SYSTEM ANALYST · MAINFRAME MODERNIZATION</span>
                         <h3>Claims<br>Modernization</h3>
+                        <p class="project-oneliner">Wrote legacy COBOL claims logic as natural-language specifications that an automated toolchain converted into Java.</p>
 
                         <div class="project-body">
                             <p>
@@ -781,6 +785,7 @@
 
                         <span class="project-kicker">SENIOR SOFTWARE DEVELOPER · MAINFRAME DEVELOPMENT</span>
                         <h3>Image Rewrite<span class="h3-sub">(Claims Adjudication Process)</span></h3>
+                        <p class="project-oneliner">Built the core COBOL, IMS and batch modules of a new claims adjudication system, largely independently.</p>
 
                         <div class="project-body">
                             <p>
@@ -845,6 +850,7 @@
 
                         <span class="project-kicker">SENIOR SOFTWARE DEVELOPER · ENTERPRISE INTEGRATION</span>
                         <h3>SOA API Services<br>(eHub Integration)</h3>
+                        <p class="project-oneliner">Fixed recurring batch failures and ran eligible jobs in parallel, reducing reruns and load time in the eHub data pipeline.</p>
 
                         <div class="project-body">
                             <p>
@@ -901,6 +907,7 @@
 
                         <span class="project-kicker">SENIOR SOFTWARE DEVELOPER · TEST DATA MANAGEMENT</span>
                         <h3>Test Data<br>Management</h3>
+                        <p class="project-oneliner">Owned test data for over a year: provisioned and masked healthcare data for lower environments across 100+ tickets.</p>
 
                         <div class="project-body">
                             <p>
@@ -1561,6 +1568,22 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onScroll);
         onScroll();
+
+        var header = document.querySelector('.site-header');
+        var toggle = document.querySelector('.menu-toggle');
+        if (toggle && header) {
+            toggle.addEventListener('click', function () {
+                var open = header.classList.toggle('menu-open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+            document.querySelectorAll('.main-nav a').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    header.classList.remove('menu-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
 
         var links = {};
         document.querySelectorAll('.main-nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = [a]; });

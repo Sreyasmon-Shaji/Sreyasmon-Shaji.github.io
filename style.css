@@ -4260,6 +4260,52 @@ a {
 
 /* Expertise: make room for the delivery strip */
 .expertise-head { margin-bottom: 26px; }
-.expertise-card { padding-top: 22px; padding-bottom: 22px; }
+.expertise-card { padding-top: 20px; padding-bottom: 20px; }
 .expertise-card .card-number { margin-bottom: 18px; }
 .deliver-strip { margin-top: 12px; padding-top: 10px; padding-bottom: 10px; }
+
+/* Experience: keep each card's tag boxes on one tidy line, level across the three cards */
+.exp-tags {
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+
+.exp-tags span {
+    white-space: nowrap;
+}
+
+@media (max-width: 1250px) and (min-width: 1051px) {
+    .exp-tags {
+        gap: 5px;
+    }
+
+    .exp-tags span {
+        padding: 7px 6px;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+/* EXPERIENCE: tidy, evenly sized tag boxes (3 per row, aligned across the three columns) */
+
+.exp-tags {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding-top: 16px;
+}
+
+.exp-tags span {
+    padding: 9px 4px;
+    text-align: center;
+    white-space: nowrap;
+    border-color: rgba(255,255,255,0.32);
+    background: rgba(255,255,255,0.04);
+}
+
+@media (min-width: 1051px) {
+    .experience-section { padding-top: 66px; padding-bottom: 30px; }
+    .exp-step li { margin-bottom: 8px; }
+    .exp-tags { gap: 7px; padding-top: 12px; }
+    .exp-tags span { padding: 6px 4px; }
+}
